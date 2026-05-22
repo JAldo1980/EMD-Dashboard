@@ -46,7 +46,7 @@ export default function CommandHub({ clients, onSelectClient, theme, onToggleThe
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <div className={styles.brand}>
-            <div className={styles.brandMark}>ED</div>
+            <img src="/logo.svg" alt="Extramile Digital" className={styles.brandMark} />
             <div>
               <div className={styles.brandName}>KAM Command Hub</div>
               <div className={styles.brandSub}>Extramile Digital — Key Account Manager</div>
