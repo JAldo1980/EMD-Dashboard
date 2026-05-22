@@ -346,7 +346,7 @@ function DeliveryPillar({ client }) {
   )
 }
 
-export default function ClientDetail({ client, onBack }) {
+export default function ClientDetail({ client, onBack, theme, onToggleTheme }) {
   const [activePillar, setActivePillar] = useState('market')
 
   const pillarComponents = {
@@ -384,6 +384,12 @@ export default function ClientDetail({ client, onBack }) {
                 <i className="ti ti-world" /> Website
               </a>
             )}
+            <button onClick={onToggleTheme} style={{ color: 'var(--text-muted)', fontSize: 18, padding: '4px 6px', borderRadius: 'var(--radius-sm)', transition: 'color 0.15s, background 0.15s' }}
+              onMouseEnter={e => { e.currentTarget.style.color = 'var(--text-primary)'; e.currentTarget.style.background = 'var(--bg-card)' }}
+              onMouseLeave={e => { e.currentTarget.style.color = 'var(--text-muted)'; e.currentTarget.style.background = 'none' }}
+              title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}>
+              <i className={`ti ${theme === 'dark' ? 'ti-sun' : 'ti-moon'}`} />
+            </button>
           </div>
         </div>
       </header>

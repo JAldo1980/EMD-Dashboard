@@ -37,7 +37,7 @@ function totalHours(clients) {
   }, 0)
 }
 
-export default function CommandHub({ clients, onSelectClient }) {
+export default function CommandHub({ clients, onSelectClient, theme, onToggleTheme }) {
   const atRisk = clients.filter(c => c.riskLevel === 'high').length
   const upsells = clients.reduce((sum, c) => sum + (c.commercials.upsells?.filter(u => u.status === 'pipeline' || u.status === 'in-progress').length || 0), 0)
 
@@ -52,7 +52,15 @@ export default function CommandHub({ clients, onSelectClient }) {
               <div className={styles.brandSub}>Extramile Digital — Key Account Manager</div>
             </div>
           </div>
-          <div className={styles.headerDate}>{today()}</div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <div className={styles.headerDate}>{today()}</div>
+            <button onClick={onToggleTheme} style={{ color: 'var(--text-muted)', fontSize: 18, padding: '4px 6px', borderRadius: 'var(--radius-sm)', transition: 'color 0.15s, background 0.15s' }}
+              onMouseEnter={e => { e.currentTarget.style.color = 'var(--text-primary)'; e.currentTarget.style.background = 'var(--bg-card)' }}
+              onMouseLeave={e => { e.currentTarget.style.color = 'var(--text-muted)'; e.currentTarget.style.background = 'none' }}
+              title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}>
+              <i className={`ti ${theme === 'dark' ? 'ti-sun' : 'ti-moon'}`} />
+            </button>
+          </div>
         </div>
       </header>
 

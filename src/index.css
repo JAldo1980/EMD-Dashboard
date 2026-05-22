@@ -5,6 +5,7 @@
   --bg-surface: #141416;
   --bg-card: #1a1a1d;
   --bg-card-hover: #1f1f23;
+  --bg-header: rgba(13,13,15,0.85);
   --border: rgba(255,255,255,0.07);
   --border-strong: rgba(255,255,255,0.12);
   --text-primary: #f0f0f0;
@@ -30,6 +31,19 @@
   color: var(--text-primary);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
+}
+
+[data-theme="light"] {
+  --bg: #f4f4f6;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #ededf1;
+  --bg-header: rgba(244,244,246,0.85);
+  --border: rgba(0,0,0,0.08);
+  --border-strong: rgba(0,0,0,0.15);
+  --text-primary: #0d0d0f;
+  --text-secondary: #666666;
+  --text-muted: #9999a8;
 }
 
 body { min-height: 100vh; background: var(--bg); }
