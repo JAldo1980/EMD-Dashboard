@@ -1,0 +1,314 @@
+[
+  {
+    "id": "certus",
+    "name": "Certus Card Group",
+    "shortName": "Certus",
+    "sector": "Plastic card manufacturing & supply",
+    "color": "#4f7ef8",
+    "riskLevel": "medium",
+    "riskLabel": "Must deliver monthly",
+    "dashboardUrl": "https://extramile-hub.vercel.app/clients/Certus",
+    "website": "https://www.certuscardgroup.com/",
+    "lastUpdated": "April 2026",
+    "commercials": {
+      "retainer": "TBC",
+      "hours": 29.5,
+      "services": ["SEO", "Social", "Paid Media"],
+      "contractType": "Rolling 30 days",
+      "upsells": [
+        { "name": "LinkedIn Ads", "status": "in-progress", "note": "B2B brand awareness — launching May 2026" },
+        { "name": "Loyalty card landing page", "status": "opportunity", "note": "70+ clicks, zero conversions — page review needed" },
+        { "name": "AEO / AI citation strategy", "status": "emerging", "note": "Track citations in ChatGPT/Gemini for card queries" }
+      ],
+      "ppcSpend": "£2,672/mo",
+      "note": "Significant PPC activity across Certus and Plastic Card Hub accounts. Certus retainer value TBC."
+    },
+    "relationship": {
+      "contact": "Kirsty Leigh",
+      "role": "Marketing Manager",
+      "email": "Kirsty.Leigh@certuscardgroup.com",
+      "lastMeeting": "Last week",
+      "nps": null,
+      "healthNote": "Stable relationship, no churn signals. Risk is performance-based — client expects consistent monthly progress. Website migration in Apr disrupted conversion tracking; priority is restoring accurate measurement in May.",
+      "actions": [
+        { "priority": "high", "text": "Fix Google Tag Manager / conversion tracking post-migration" },
+        { "priority": "medium", "text": "Merge PCH and Certus Google Ads accounts in May" },
+        { "priority": "medium", "text": "Launch LinkedIn Ads — B2B brand awareness campaign" }
+      ]
+    },
+    "market": {
+      "sector": "Plastic card manufacturing & supply",
+      "keyProducts": "Gift, smart, loyalty, membership, RFID cards",
+      "location": "Skelmersdale, Lancashire",
+      "btob": "Hospitality, retail, enterprise",
+      "signals": [
+        { "type": "warning", "text": "AI Overviews expanding — B2B SaaS sector now sees AIO on ~22% of niche searches. Gartner/G2 dominating citations." },
+        { "type": "info", "text": "Human content advantage — human-written copy 8x more likely to rank #1 than AI-generated. Content investment justified." },
+        { "type": "warning", "text": "ChatGPT citing 20% fewer sites following GPT-5.3 rollout — favouring authoritative entities only." },
+        { "type": "success", "text": "March 2026 Core Update settled (8 Apr). B2B sites with topical authority seeing more stable rankings and higher-quality leads." }
+      ]
+    },
+    "delivery": {
+      "reportPeriod": "April 2026",
+      "seo": {
+        "metrics": [
+          { "label": "Organic conversions", "value": "47", "target": "6", "delta": "+683%", "trend": "up" },
+          { "label": "Organic clicks", "value": "421", "target": "260", "delta": "+8.2%", "trend": "up" },
+          { "label": "New users", "value": "940", "delta": "+39.3%", "trend": "up" },
+          { "label": "CTR", "value": "1.09%", "delta": "+20.9%", "trend": "up" },
+          { "label": "Impressions", "value": "38,661", "delta": "-10.5%", "trend": "down", "note": "GSC logging bug fix — not a real drop" }
+        ]
+      },
+      "ppc": [
+        {
+          "account": "Certus Google Ads",
+          "metrics": [
+            { "label": "Clicks", "value": "803", "delta": "-14.4%", "trend": "down" },
+            { "label": "Spend", "value": "£1,691", "delta": "-11.3%", "trend": "up" },
+            { "label": "Digital conv.", "value": "6", "delta": "-78.6%", "trend": "down", "note": "Migration-related tracking disruption" },
+            { "label": "Phone calls", "value": "10", "delta": "-9.1%", "trend": "neutral" },
+            { "label": "Avg. CPC", "value": "£2.11", "delta": "+3.7%", "trend": "neutral" },
+            { "label": "Impression share", "value": "11.71%", "delta": "+9.3%", "trend": "up" }
+          ]
+        },
+        {
+          "account": "Plastic Card Hub",
+          "metrics": [
+            { "label": "Conversions", "value": "210.59", "delta": "+9.4%", "trend": "up" },
+            { "label": "Cost per conv.", "value": "£4.66", "delta": "-8.4%", "trend": "up" },
+            { "label": "CTR", "value": "13.03%", "delta": "+8.9%", "trend": "up" },
+            { "label": "Spend", "value": "£980.91", "delta": "+0.2%", "trend": "neutral" }
+          ]
+        }
+      ],
+      "insight": "Top converting keyword: [plastic card hub] — 33.89 conv. at £0.41 CPC (67% CTR). Digital conv. drop on Certus side is migration-related; phone intent remained stable at 10 calls.",
+      "nextSteps": [
+        "Review conversion tracking accuracy after site migration",
+        "Merge PCH and Certus Google Ads accounts",
+        "Refresh ad copy, update sitelinks and extensions",
+        "Set up LinkedIn Ads for B2B brand awareness"
+      ]
+    }
+  },
+  {
+    "id": "photofab",
+    "name": "Photofab",
+    "shortName": "Photofab",
+    "sector": "Precision chemical etching (B2B manufacturing)",
+    "color": "#3ecf8e",
+    "riskLevel": "medium",
+    "riskLabel": "SEO performance concern",
+    "dashboardUrl": "https://photofab-audit.vercel.app",
+    "website": "https://www.photofab.co.uk/",
+    "lastUpdated": "May 2026",
+    "commercials": {
+      "retainer": "£3,000",
+      "hours": 30,
+      "services": ["SEO", "PPC", "Social", "Strategy"],
+      "contractType": "Rolling 30 days",
+      "strategyAllocation": "14%",
+      "upsells": [],
+      "note": "Budget is tight. No upsells appropriate until core delivery is proven. Strategy is 14% of retainer time (~4.2h/month)."
+    },
+    "relationship": {
+      "contact": "Neil Shorten",
+      "role": "Managing Director",
+      "email": "neil.shorten@photofab.co.uk",
+      "lastMeeting": "1 April 2026",
+      "nps": null,
+      "healthNote": "Neil is MD-level — decisions made at the top. Likes visible activity and tangible progress. Budget is tight so value delivery is critical every month.",
+      "actions": [
+        { "priority": "high", "text": "Address poor SEO performance — upload latest report for specific recommendations" },
+        { "priority": "high", "text": "Ensure tangible deliverable visible this month" },
+        { "priority": "medium", "text": "Fix broken navigation links — 5 confirmed 404 errors in menu" },
+        { "priority": "medium", "text": "Add meta descriptions to all 23+ pages — zero currently exist" }
+      ]
+    },
+    "market": {
+      "sector": "Precision chemical etching",
+      "established": "1968 — 55+ years",
+      "keyMarkets": "Aerospace, Defence, Medical, Automotive, Electronics",
+      "accreditations": "ISO 9001/14001/45001 · SC21 Bronze (6 years)",
+      "signals": [
+        { "type": "success", "text": "Renewables & hydrogen growth — fuel cell plates and precision components align with green energy sector demand." },
+        { "type": "success", "text": "UK defence spending rising — aerospace & defence content aligns with government procurement uplift." },
+        { "type": "warning", "text": "Far East supply chain pressure — creates opportunity for UK-based precision manufacturing." },
+        { "type": "info", "text": "SC21 Bronze for 6 consecutive years — powerful credibility signal for defence/aerospace procurement teams." }
+      ]
+    },
+    "delivery": {
+      "reportPeriod": "May 2026 (audit)",
+      "auditScore": "6.5 / 10",
+      "auditUrl": "https://photofab-audit.vercel.app",
+      "criticalIssues": 6,
+      "highPriorityIssues": 5,
+      "contentGaps": 13,
+      "kpis": [
+        { "label": "Website enquiries (Pillar 1)", "target": "80+/mo", "value": null },
+        { "label": "Technical guide downloads", "target": "30+/mo", "value": null },
+        { "label": "Ad-driven enquiries (Pillar 2)", "target": "35+/mo", "value": null },
+        { "label": "Cost per inquiry", "target": "<£15.00", "value": null },
+        { "label": "Email-sourced enquiries (Pillar 3)", "target": "12+/mo", "value": null },
+        { "label": "Social referral leads (Pillar 4)", "target": "8+/mo", "value": null }
+      ],
+      "topAuditFindings": [
+        "Zero meta descriptions across all 23+ pages",
+        "5 confirmed 404 errors in live navigation menu",
+        "No schema / structured data anywhere on site",
+        "NPS score (63%) and testimonials buried on sub-page — not visible on homepage",
+        "Blog drives traffic but converts none — no dates, no CTAs, no email capture",
+        "Only 4 case studies — 3 are under 50 words"
+      ],
+      "insight": "Site has solid bones and genuine credibility signals — but is optimised for warm leads only. The 6 critical fixes (meta descriptions, 404s, schema, testimonials, blog CTAs, case studies) should produce measurable improvement within 4–6 weeks.",
+      "nextSteps": [
+        "Write meta descriptions for all 23+ pages (immediate)",
+        "Fix all broken navigation 404 errors",
+        "Add publication dates to all blog posts",
+        "Surface NPS score and testimonials on homepage",
+        "Implement JSON-LD schema — FAQPage alone earns rich snippets"
+      ]
+    }
+  },
+  {
+    "id": "northpoint",
+    "name": "Northpoint",
+    "shortName": "Northpoint",
+    "sector": "Industrial coatings & corrosion protection",
+    "color": "#a78bfa",
+    "riskLevel": "medium",
+    "riskLabel": "Must deliver activity",
+    "dashboardUrl": "https://northpoint-gtm-dashboard.vercel.app",
+    "website": "https://northpoint.ltd.uk/",
+    "lastUpdated": "May 2026",
+    "commercials": {
+      "retainer": "£2,500",
+      "hours": 25,
+      "additionalHours": 8,
+      "additionalNote": "PR upsell — secured",
+      "services": ["SEO", "Social", "PR"],
+      "contractType": "Rolling 30 days",
+      "upsells": [
+        { "name": "PPC / Paid Media", "status": "pipeline", "note": "Strong candidate once commercial SEO pages are established" },
+        { "name": "AMP8 content hub", "status": "opportunity", "note": "Dedicated water sector content to capture £100bn+ investment cycle" },
+        { "name": "Defence landing pages", "status": "in-progress", "note": "Leverage Joscar status — zero current keyword coverage for defence" },
+        { "name": "Gated technical content", "status": "opportunity", "note": "DWI compliance guides, NACE inspection downloads to capture MQLs" }
+      ],
+      "note": "Base retainer £2,500 / 25h. PR upsell (+8h) already secured. PPC in active pipeline conversation."
+    },
+    "relationship": {
+      "contact": "Matthew Walton",
+      "role": "Digital Marketing Manager",
+      "email": "Matthew@northpoint.ltd.uk",
+      "lastMeeting": "19 May 2026",
+      "nps": null,
+      "healthNote": "Matthew is day-to-day marketing contact and a good internal champion. Like Photofab, this client needs to see consistent visible progress. PR upsell secured — protect and deliver.",
+      "actions": [
+        { "priority": "high", "text": "Establish enquiry data baseline in first 30 days — measure ROI of technical storytelling" },
+        { "priority": "high", "text": "Move keyword mix from informational to commercial/transactional intent" },
+        { "priority": "medium", "text": "Launch defence landing page + AMP8 content hub" },
+        { "priority": "medium", "text": "Set up sector-specific contact form fields to improve MQL tracking" }
+      ]
+    },
+    "market": {
+      "sector": "Industrial coatings & corrosion protection",
+      "keyVerticals": "Water (AMP8), Defence, Energy",
+      "accreditations": "Joscar · Cyber Essentials Plus",
+      "milestone": "50th Anniversary 2026",
+      "signals": [
+        { "type": "success", "text": "AMP8 water investment cycle — £100bn+ capital programme creating major demand for DWI-compliant coating specialists." },
+        { "type": "success", "text": "Defence sector growth — Joscar + Cyber Essentials Plus opens Tier 1 defence supply chain (BAE Systems, Rolls-Royce)." },
+        { "type": "info", "text": "50th Anniversary brand moment — '1976 Archive' heritage storytelling is primary vehicle for brand dominance and procurement trust." },
+        { "type": "warning", "text": "SERP visibility gap — only 5 non-branded top-10 rankings, all informational. Zero commercial or transactional intent coverage." }
+      ]
+    },
+    "delivery": {
+      "reportPeriod": "May 2026",
+      "serpHealth": {
+        "top10NonBranded": 5,
+        "allInformational": true,
+        "commercialTransactional": 0,
+        "defenceCoverage": "Zero (bar fencing)"
+      },
+      "kpis": [
+        { "label": "Marketing-generated revenue (MQL→SQL)", "target": "Baseline: month 1", "value": null, "note": "Track AMP8 + Defence enquiry value" },
+        { "label": "GEO / AI citation share of voice", "target": "Tracking setup needed", "value": null, "note": "DWI compliance, NACE inspection queries" },
+        { "label": "High-intent conversion rate", "target": "TBC", "value": null, "note": "Gated content downloads (MQL pipeline)" },
+        { "label": "Defence + AMP8 organic sessions", "target": "TBC", "value": null, "note": "10 defence terms + AMP8 keyword set" },
+        { "label": "Brand search volume (50th anniversary)", "target": "Baseline needed", "value": null, "note": "'Northpoint' branded queries + heritage content engagement" }
+      ],
+      "insight": "Only 5 non-branded top-10 rankings — all informational. Zero commercial or transactional intent in P1 rankings. Current SERPs are littered with AIO, sponsored, video, and PAA features. Defence landing page and AMP8 hub are the priority deliverables.",
+      "nextSteps": [
+        "Build defence sector landing page and supporting content",
+        "Launch AMP8 water investment content hub",
+        "Shift keyword targeting to commercial and transactional intent",
+        "Set up AEO tracking framework for AI citation monitoring",
+        "Create sector-specific contact form fields"
+      ]
+    }
+  },
+  {
+    "id": "membracon",
+    "name": "Membracon",
+    "shortName": "Membracon",
+    "sector": "Membrane filtration & water treatment",
+    "color": "#f5a623",
+    "riskLevel": "high",
+    "riskLabel": "Trust risk — at risk",
+    "dashboardUrl": null,
+    "website": "https://www.membracon.co.uk/",
+    "lastUpdated": "May 2026",
+    "commercials": {
+      "retainer": "£2,400",
+      "hours": 24,
+      "services": ["SEO", "Social"],
+      "contractType": "Rolling 30 days",
+      "upsells": [
+        { "name": "LinkedIn Ads", "status": "pipeline", "note": "Strong B2B fit — targets procurement and engineering decision-makers" },
+        { "name": "Google Ads", "status": "pipeline", "note": "High-intent technical queries for filtration equipment" },
+        { "name": "Technical content programme", "status": "opportunity", "note": "Whitepapers and case studies to demonstrate sector depth and win trust" }
+      ],
+      "note": "Upsell opportunities exist but must not be pursued until relationship trust is secured. Fix the churn risk first."
+    },
+    "relationship": {
+      "contact": "Aman Sohl",
+      "role": "Business Development Manager",
+      "email": "aman.sohl@membracon.co.uk",
+      "lastMeeting": "22 May 2026",
+      "nps": null,
+      "healthNote": "Client trusts Extramile but has a growing concern about the agency's ability to deliver and truly understand their highly technical, complex business. This is a real churn risk that must be addressed immediately.",
+      "riskAlert": "Client concerned about agency's understanding of complex membrane filtration business. Immediate action required to demonstrate technical credibility.",
+      "actions": [
+        { "priority": "critical", "text": "Produce a sector-fluent deliverable this month — demonstrate understanding of MBR, RO, NF, and industrial water treatment" },
+        { "priority": "critical", "text": "Create a deep-dive sector brief internally — team must speak the client's language" },
+        { "priority": "high", "text": "Deliver something tangible Aman can take to his stakeholders internally" },
+        { "priority": "high", "text": "Establish a clear monthly reporting cadence — make all activity visible and quantifiable" },
+        { "priority": "medium", "text": "Upload KPI document from Google Drive to populate performance baseline" }
+      ]
+    },
+    "market": {
+      "sector": "Membrane filtration & water treatment",
+      "businessType": "Complex B2B / technical engineering",
+      "complexityFlag": "Highly technical — specialist knowledge required",
+      "signals": [
+        { "type": "success", "text": "Water sector growth — AMP8 and global water scarcity driving demand for advanced membrane filtration technology." },
+        { "type": "success", "text": "Sustainability mandates — industrial water reuse and ZLD regulations creating long-term structural tailwinds." },
+        { "type": "warning", "text": "Long sales cycles — enterprise filtration procurement is highly consultative. Content must support the entire buyer journey." },
+        { "type": "danger", "text": "Technical credibility gap — client is concerned agency does not fully understand their complex business. Churn risk." }
+      ]
+    },
+    "delivery": {
+      "reportPeriod": "May 2026",
+      "kpis": [],
+      "dataNeeded": true,
+      "dataNote": "KPI document available via Google Drive link provided. Share access or upload the file to populate this section.",
+      "insight": "SEO and Social active but performance baseline not yet established. Priority is proving technical credibility before expanding scope.",
+      "nextSteps": [
+        "Internal brief: deep-dive on MBR, RO, NF, UF filtration technology",
+        "Produce one sector-fluent content piece this month",
+        "Establish monthly reporting cadence with clear KPIs",
+        "Connect Google Drive KPI document to populate performance data",
+        "Do not pursue upsell conversations until trust is rebuilt"
+      ]
+    }
+  }
+]
