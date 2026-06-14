@@ -876,6 +876,109 @@ function TaskCard({ task, expanded, onToggle }) {
   )
 }
 
+// ─── EXPORT ──────────────────────────────────────────────────────────────────
+
+function exportDashboard() {
+  const now = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+
+  const lines = [
+    `# EMD Account Command Centre — Context Brief`,
+    `**Last updated:** ${now}`,
+    `**Purpose:** This document is the live context source for the EMD Gemini Gem. It reflects the current state of the Extra Mile Digital account — strategic priorities, team workload, tasks, KPIs and sector guardrails.`,
+    ``,
+    `---`,
+    ``,
+    `## Company Context`,
+    `Extra Mile Digital (EMD) is a 28-person B2B marketing agency undergoing major structural transformation in 2026. Repositioning from generalist B2B marketing to "The go-to agency for lead generation and revenue growth" in Defence, Manufacturing, Chemical, and Engineering.`,
+    ``,
+    `**Brand rule:** "Extra Mile" = data-proven ROI and undeniable value — NOT unbilled over-servicing. Hard internal rule. Monthly capacity cap: 42 hours per account maximum.`,
+    ``,
+    `---`,
+    ``,
+    `## Financial KPIs (2026/27 Targets)`,
+    ...KPIs.map(k => `- **${k.label}:** ${k.value} — ${k.sub}`),
+    ``,
+    `---`,
+    ``,
+    `## Key Performance Metrics`,
+    `- Organic traffic: +30% YoY`,
+    `- LinkedIn engagement: consistently 22%`,
+    `- Email: 25% open rate, 10% CTR`,
+    `- Webinar sign-ups: 50 (attendance target: 25)`,
+    `- Podcast: 10 downloads within 7 days of release`,
+    `- SEMrush AI score: 10 by September 2026 (currently 0)`,
+    `- Average engagement time: 90 seconds on site`,
+    ``,
+    `---`,
+    ``,
+    `## Sector Guardrails`,
+    ...SECTORS.flatMap(s => {
+      const d = SECTOR_DETAILS[s.id]
+      return [
+        ``,
+        `### ${d.title}`,
+        d.credential ? `**Key credential:** ${d.credential} — ${d.credentialNote}` : '',
+        `**Demographic:** ${d.demographic}`,
+        `**Content focus:** ${d.contentFocus}`,
+        `**Guardrails:**`,
+        ...d.points.map(p => `- **${p.label}:** ${p.detail}`),
+      ].filter(Boolean)
+    }),
+    ``,
+    `---`,
+    ``,
+    `## Team Workload (June 2026)`,
+    ...TEAM.map(m =>
+      `### ${m.name} — ${m.role} [${m.flag}] (${m.allocation}% capacity)\n${m.directive}\n**Current tasks:** ${m.tasks.join(', ')}${m.deadline ? `\n**Deadline:** ${m.deadline}` : ''}`
+    ),
+    ``,
+    `---`,
+    ``,
+    `## 30/60/90 Day Plan`,
+    ``,
+    `### June 2026 Tasks`,
+    ...TASKS.june.map(t =>
+      `**[${t.type}] ${t.title}**\n- Owner: ${t.assigned.join(', ')} | Budget: ${t.budget || 'TBC'} | Status: ${t.status}${t.deadline ? ` | Deadline: ${t.deadline}` : ''}\n- ${t.detail}`
+    ),
+    ``,
+    `### July 2026 Tasks`,
+    ...TASKS.july.map(t =>
+      `**[${t.type}] ${t.title}**\n- Owner: ${t.assigned.join(', ')} | Budget: ${t.budget || 'TBC'} | Status: ${t.status}${t.deadline ? ` | Deadline: ${t.deadline}` : ''}\n- ${t.detail}`
+    ),
+    ``,
+    `---`,
+    ``,
+    `## Monday.com Task Board (June 2026)`,
+    ...MONDAY_TASKS.map(t =>
+      `**[${t.cat}] ${t.title}**\n- Owner: ${t.owner.join(', ')} | Priority: ${t.priority} | Status: ${t.status}${t.dev ? ' | Dev required' : ''}\n- Impact: ${t.impact}\n- Notes: ${t.notes}`
+    ),
+    ``,
+    `---`,
+    ``,
+    `## Channel Mix (42hr monthly cap)`,
+    ...CHANNELS.map(c => `- **${c.label}** (${c.hours}, ${c.pct}%): ${c.note}`),
+    ``,
+    `---`,
+    ``,
+    `## Account Management`,
+    `- **Account Lead (Extramile Digital):** James Alderman`,
+    `- **Client EMD Team:** Jene (delivery matrix), Amanda (CEO/strategic lead), James Roberts (KAM/transformation)`,
+    ``,
+    `---`,
+    ``,
+    `*Generated from EMD Account Command Centre dashboard. Re-export and re-upload to Drive after any significant dashboard update.*`,
+  ]
+
+  const content = lines.join('\n')
+  const blob = new Blob([content], { type: 'text/markdown' })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = `EMD-Context-Brief-${new Date().toISOString().slice(0, 10)}.md`
+  a.click()
+  URL.revokeObjectURL(url)
+}
+
 // ─── MAIN ────────────────────────────────────────────────────────────────────
 
 export default function EMDDashboard() {
@@ -919,6 +1022,15 @@ export default function EMDDashboard() {
               <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#3ecf8e', display: 'inline-block' }} />
               Live · June 2026
             </div>
+            <button
+              onClick={exportDashboard}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition-all"
+              style={{ background: 'rgba(79,126,248,0.1)', borderColor: 'rgba(79,126,248,0.3)', color: '#4f7ef8' }}
+              title="Download dashboard context as markdown — upload to Google Drive for your Gem"
+            >
+              <BookOpen size={11} />
+              Sync to Drive
+            </button>
           </div>
         </div>
       </header>
