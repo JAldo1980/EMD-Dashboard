@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northpoint – JOSCAR Accredited Powder Coating Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Metrophobic&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Metrophobic', Helvetica, Arial, Lucida, sans-serif; font-size: 14px; line-height: 1.7; color: #717073; background: #fff; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: #009FE3; text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul { padding-left: 1.4em; }
+ul li { margin-bottom: 8px; color: #717073; font-size: 16px; line-height: 1.7; font-weight: 500; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.two-col.flip { direction: rtl; }
+.two-col.flip > * { direction: ltr; }
+.section-white { background: #fff; padding: 64px 0; }
+.section-grey  { background: #EBEAE9; padding: 64px 0; }
+h1, h2, h3, h4 { font-family: 'Metrophobic', Helvetica, Arial, Lucida, sans-serif; font-weight: 700; }
+h1 { font-size: 52px; color: #fff; text-transform: uppercase; line-height: 1.1; }
+h2 { font-size: 32px; color: #000; text-transform: uppercase; font-weight: 700; line-height: 1em; margin-bottom: 18px; }
+h2.blue { color: #009FE3; }
+h3 { font-size: 18px; color: #000; font-weight: 500; margin-bottom: 10px; line-height: 1.4; }
+h4 { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px; line-height: 1.3; }
+p { font-size: 16px; font-weight: 500; color: #717073; line-height: 1.7; margin-bottom: 14px; }
+p:last-child { margin-bottom: 0; }
+.heading-divider { width: 70px; height: 3px; background: #009FE3; margin: 10px auto 26px; }
+.body-link { color: #009FE3; border-bottom: 1px solid rgba(0,159,227,0.35); }
+.body-link:hover { border-bottom-color: #009FE3; text-decoration: none; }
+.btn { display: inline-block; font-family: 'Metrophobic', Helvetica, Arial, Lucida, sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; padding: 12px 30px; border-radius: 64px; cursor: pointer; transition: opacity 0.2s; text-decoration: none; }
+.btn:hover { opacity: 0.88; text-decoration: none; }
+.btn-primary { background: #009FE3; color: #fff; border: 2px solid #009FE3; }
+.btn-outline { background: transparent; color: #fff; border: 2px solid #fff; }
+.btn-wrap { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 26px; }
+.hero { background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), linear-gradient(135deg,#0d1c30 0%,#1c3155 100%); padding: 160px 0; }
+.hero .container { max-width: 900px; }
+.img-block { width: 100%; aspect-ratio: 4/3; background: linear-gradient(135deg,#1c3155 0%,#009FE3 100%); border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 20px; text-align: center; color: rgba(255,255,255,0.5); font-size: 12px; font-style: italic; line-height: 1.5; }
+.img-block .img-label { color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+.cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
+.process-card { background: #009FE3 !important; padding: 24px 22px !important; border-radius: 4px; }
+.card-num { font-size: 11px !important; font-weight: 700 !important; text-transform: uppercase; letter-spacing: 0.07em; color: #004f72 !important; margin-bottom: 6px; }
+.process-card h4 { color: #002D56 !important; font-size: 16px !important; font-weight: 700 !important; margin-bottom: 8px !important; }
+.process-card p { font-size: 14px !important; color: #00294d !important; line-height: 1.6 !important; margin: 0 !important; }
+.process-card p a { color: #002D56 !important; border-bottom: 1px solid rgba(0,45,86,0.4); }
+/* Dark navy card — white text has good contrast on #1c3155 */
+.process-card--dark { background: #1c3155 !important; }
+.process-card--dark .card-num { color: rgba(255,255,255,0.55) !important; }
+.process-card--dark h4 { color: #fff !important; }
+.process-card--dark p { color: rgba(255,255,255,0.9) !important; }
+.callout-box { display: flex; gap: 18px; align-items: flex-start; background: #1c3155; border-radius: 4px; padding: 24px 26px; margin-top: 26px; }
+.callout-icon { font-size: 26px; flex-shrink: 0; margin-top: 2px; }
+.callout-box h3 { color: #fff; font-weight: 700; font-size: 16px; margin-bottom: 7px; }
+.callout-box p { color: rgba(255,255,255,0.8); font-size: 14px; margin: 0; line-height: 1.65; }
+.faq-list { display: flex; flex-direction: column; max-width: 860px; margin: 0 auto; }
+.faq-item { border-top: 1px solid #d4d3d2; }
+.faq-item:last-child { border-bottom: 1px solid #d4d3d2; }
+/* details/summary accordion — no JS */
+.faq-item summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 17px;
+  color: #000;
+  font-weight: 700;
+  line-height: 1.4;
+  user-select: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  display: inline-block;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 50%;
+  background: #009FE3;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1;
+  padding-top: 3px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: background 0.2s ease;
+}
+.faq-item[open] summary::after {
+  content: '\2212';
+  padding-top: 5px;
+}
+.faq-item summary:hover { color: #009FE3; }
+.faq-body {
+  padding-bottom: 18px;
+  overflow: hidden;
+  animation: faq-open 0.22s ease;
+}
+@keyframes faq-open {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.faq-item p { font-size: 15px; margin: 0; }
+.download-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 8px; }
+.download-card { background: #fff; border: 1px solid #d4d3d2; border-radius: 4px; padding: 22px 20px; display: flex; flex-direction: column; }
+.download-card h3 { font-size: 18px; color: #000; font-weight: 700; margin-bottom: 8px; text-transform: none; }
+.download-card p { font-size: 14px; margin-bottom: 18px; flex-grow: 1; }
+.download-card .btn { font-size: 13px; padding: 8px 20px; align-self: flex-start; margin-top: 10px; }
+.related-grid { display: grid !important; grid-template-columns: repeat(3,1fr) !important; gap: 20px !important; margin-top: 12px !important; }
+.related-card { display: block !important; border: 1px solid #d4d3d2 !important; border-radius: 4px !important; overflow: hidden !important; text-decoration: none !important; transition: box-shadow 0.22s ease, transform 0.22s ease, border-color 0.22s ease; cursor: pointer; }
+.related-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.13) !important; transform: translateY(-3px); border-color: #009FE3 !important; text-decoration: none !important; }
+.related-card:hover .rc-body h3 { color: #009FE3 !important; }
+.rc-img { width: 100% !important; height: 0 !important; padding-bottom: 56.25% !important; background: linear-gradient(135deg,#1c3155,#009FE3) !important; display: block !important; }
+.rc-body { padding: 16px !important; }
+.rc-body h3 { font-size: 14px !important; color: #000 !important; font-weight: 700 !important; margin-bottom: 6px !important; text-transform: uppercase !important; transition: color 0.22s ease; }
+.rc-body p { font-size: 13px !important; color: #717073 !important; margin: 0 !important; line-height: 1.55 !important; }
+.stats-bar { background: #EBEAE9; padding: 54px 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; text-align: center; }
+.stat-icon { margin: 0 auto 12px; }
+.stat-number { font-size: 28px; font-weight: 700; color: #1c3155; line-height: 1; margin-bottom: 6px; }
+.stat-label { font-size: 12px; color: #717073; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.4; }
+.cta-banner { background: linear-gradient(rgba(0,45,86,0.85),rgba(0,45,86,0.85)), linear-gradient(135deg,#009FE3,#1c3155); padding: 90px 0; text-align: center; }
+.cta-banner h2 { color: #fff; font-size: 28px; max-width: 700px; margin: 0 auto; }
+.cta-banner .btn-wrap { justify-content: center; }
+@media (max-width: 960px) {
+  .two-col { grid-template-columns: 1fr; gap: 30px; }
+  .two-col.flip { direction: ltr; }
+  .cards-grid, .download-grid, .related-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2,1fr); }
+  h1 { font-size: 32px; } h2 { font-size: 24px; }
+  .hero { padding: 100px 0; }
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <h1>JOSCAR Accredited Powder Coating Specialist, Manchester</h1>
+    <p style="color: rgba(255,255,255,0.88); font-size: 18px; margin-top: 16px; max-width: 640px; line-height: 1.6;">Pre-qualified supply chain excellence for the UK's defence, aerospace, and security industries.</p>
+    <div class="btn-wrap">
+      <a class="btn btn-primary" href="#">Contact Us</a>
+      <a class="btn btn-outline" href="#">+44 (0)161 330 4551</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section-white">
+  <div class="container">
+    <div style="max-width: 820px;">
+      <p style="font-size: 17px; line-height: 1.8;">When procurement teams at prime contractors need a <a class="body-link" href="#">defence and aerospace coating partner</a>, the question is rarely "can they do the work?" It is "can they prove it?" For Northpoint, the answer is already on record. Our JOSCAR Stage 2 accreditation means the due diligence has been completed — and is verifiable at any time through the <a class="body-link" href="#">JOSCAR portal</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS JOSCAR -->
+<section class="section-white" style="padding-top: 0;">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <h2>What is JOSCAR?</h2>
+        <p>JOSCAR — the Joint Supply Chain Accreditation Register — is the pre-qualification standard for the UK's defence, aerospace, and security supply chain. Managed by Hellios on behalf of prime contractors including BAE Systems, Babcock, Leonardo, and Rolls-Royce, JOSCAR enables supply chain managers to assess, verify, and onboard suppliers without repeating due diligence from scratch on every new programme.</p>
+        <p>Northpoint has achieved <strong>Stage 2 JOSCAR accreditation</strong> — the full assessment tier. Stage 2 goes beyond basic registration. It involves a comprehensive review across six core areas of business conduct, and is subject to annual renewal — so our status on the register is always current, not a historic snapshot.</p>
+        <p>Our registration is publicly verifiable at any time through the <a class="body-link" href="#">JOSCAR portal at hellios.com</a>. No additional pre-qualification from your team is required.</p>
+      </div>
+      <div style="text-align: center;">
+        <div class="img-block" style="margin: 0 auto;">
+          <span class="img-label">Suggested image</span>
+          JOSCAR accreditation certificate or close-up of aerospace / defence component being coated at the Manchester facility
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT THIS MEANS FOR PROCUREMENT -->
+<section class="section-white" style="padding-top: 0;">
+  <div class="container">
+    <div class="two-col flip">
+      <div>
+        <div class="img-block">
+          <span class="img-label">Suggested image</span>
+          Procurement meeting, technical documentation review, or component quality inspection
+        </div>
+      </div>
+      <div>
+        <h2>What This Means for Your Procurement Team</h2>
+        <p>If your programme requires JOSCAR-registered subcontractors, adding Northpoint to your supply chain does not require you to conduct independent pre-qualification. The work has already been done.</p>
+        <p>For procurement officers working under time pressure on <a class="body-link" href="#">defence programmes</a> — where delays are measured in cost and consequence — this is a material advantage. We sit on the register. You verify. You proceed.</p>
+        <p>This also applies to Tier 1 suppliers and system integrators who are themselves JOSCAR-registered and need their subcontractors to meet the same standard. Northpoint already does.</p>
+        <div class="btn-wrap"><a class="btn btn-primary" href="#">Speak to Our Team</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 2 ASSESSMENT -->
+<section class="section-grey">
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 4px;">
+      <div>
+        <h2 class="blue">The JOSCAR Stage 2 Assessment Covers</h2>
+        <p style="max-width: 680px;">Our Stage 2 accreditation demonstrates verified compliance across five core areas — assessed by Hellios against the standards required by prime contractors in the UK defence supply chain.</p>
+      </div>
+      <a class="btn btn-primary" style="flex-shrink: 0;" href="#">Contact Us</a>
+    </div>
+    <div class="cards-grid">
+      <div class="process-card">
+        <div class="card-num">01</div>
+        <h4>Health, Safety &amp; Environmental Management</h4>
+        <p>Site safety procedures, environmental management systems, and waste handling — assessed against defence supply chain requirements.</p>
+      </div>
+      <div class="process-card">
+        <div class="card-num">02</div>
+        <h4>Quality Assurance &amp; ISO Compliance</h4>
+        <p>Northpoint holds <a style="color: rgba(255,255,255,0.9); border-bottom: 1px solid rgba(255,255,255,0.4);" href="#">ISO 9001 certification</a>. Our quality management framework is documented and available for audit at any time.</p>
+      </div>
+      <div class="process-card">
+        <div class="card-num">03</div>
+        <h4>Anti-Bribery &amp; Ethical Business Conduct</h4>
+        <p>Policies, procedures, and training covering ethical conduct across all business relationships and supplier interactions.</p>
+      </div>
+      <div class="process-card">
+        <div class="card-num">04</div>
+        <h4>Information Security &amp; Data Handling</h4>
+        <p>Northpoint holds <strong>Cyber Essentials Plus</strong> certification, demonstrating controls over data and information security.</p>
+      </div>
+      <div class="process-card">
+        <div class="card-num">05</div>
+        <h4>Financial Standing &amp; Business Continuity</h4>
+        <p>Financial health assessment and business continuity planning — ensuring programme stability for prime contractors and Tier 1 suppliers.</p>
+      </div>
+      <div class="process-card process-card--dark">
+        <div class="card-num">Annual Review</div>
+        <h4>Stage 2 Is Renewed Every Year</h4>
+        <p>JOSCAR Stage 2 is not a one-time certificate. Hellios conducts annual renewal assessments — so our standing reflects current, ongoing compliance, not a historic review.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COATING CAPABILITIES -->
+<section class="section-white">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <h2>Coating Capabilities for Defence &amp; Aerospace Programmes</h2>
+        <p>Northpoint specialises in industrial <a class="body-link" href="#">powder coating and surface treatment</a> for high-specification engineering components. Our Manchester facility has been handling large-scale, technically demanding work for over 50 years — developing the process knowledge and quality infrastructure that defence and aerospace programmes require.</p>
+        <ul>
+          <li><strong>High-specification powder coating</strong> — durable, corrosion-resistant finishes meeting British and international standards</li>
+          <li><strong>Dedicated defence coating environment</strong> — a designated area with controlled conditions and fully documented procedures</li>
+          <li><strong>Large-format component handling</strong> — components up to 12 metres long, with full traceability at every stage</li>
+          <li><strong>DWI-compliant coating</strong> — one of only three UK companies approved for <a class="body-link" href="#">drinking water infrastructure coatings</a></li>
+          <li><strong>Emergency 24-hour processing</strong> — a structured rapid-turnaround capability developed over five decades of critical infrastructure work</li>
+          <li><strong><a class="body-link" href="#">Wet paint services</a></strong> — including NACE Level 3 inspected coating for defence-grade specifications</li>
+        </ul>
+        <p style="margin-top: 14px;">All work is carried out under our ISO 9001 Quality Management System, with full documentation available for programme audit purposes. <a class="body-link" href="#">Download our compliance documents</a>.</p>
+      </div>
+      <div>
+        <div class="img-block">
+          <span class="img-label">Suggested image</span>
+          Powder coating application or finished defence / aerospace component — inside the Northpoint Manchester facility
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY NORTHPOINT -->
+<section class="section-grey">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <h2>Why Northpoint?</h2>
+        <p>We are a JOSCAR-registered industrial coating specialist with over 50 years of operational experience at our <a class="body-link" href="#">Manchester facility</a>. Our accreditation profile — JOSCAR Stage 2, ISO 9001, Cyber Essentials Plus, and DWI approval — reflects the range of sectors we work in and the compliance standard we hold ourselves to across all of them.</p>
+        <p>We do not simply coat components. We provide technical coating solutions that extend asset life, meet the most rigorous British standards, and are delivered by a team that understands what is at stake in <a class="body-link" href="#">defence and aerospace programmes</a>.</p>
+        <p>We also work extensively in the <a class="body-link" href="#">water sector</a> — where our DWI approval supports contractors working on the UK's AMP8 infrastructure investment cycle. That breadth of compliance capability is unusual in the coating industry.</p>
+        <div class="callout-box">
+          <div class="callout-icon">🤝</div>
+          <div>
+            <h3>Employee-Owned. Accountable by Design.</h3>
+            <p>Since 2019, Northpoint has been an <a style="color: rgba(255,255,255,0.8); border-bottom: 1px solid rgba(255,255,255,0.3);" href="#">Employee-Owned Trust</a>. The 85 people who apply your coatings own the business. Accountability is not delegated to a management layer — it is built into how we operate. The person applying your coating has a direct stake in its quality.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="img-block">
+          <span class="img-label">Suggested image</span>
+          Team photo, facility exterior, or quality inspection in progress — emphasise people and ownership
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-white">
+  <div class="container">
+    <div style="text-align: center;">
+      <h2>Frequently Asked Questions</h2>
+      <div class="heading-divider"></div>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What is JOSCAR accreditation?</summary>
+        <div class="faq-body"><p>JOSCAR (Joint Supply Chain Accreditation Register) is the pre-qualification standard used by the UK defence, aerospace, and security industry. Managed by Hellios on behalf of prime contractors including BAE Systems, Babcock, Leonardo, and Rolls-Royce, it provides a single shared register of pre-qualified suppliers — reducing duplication and accelerating onboarding across the sector.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>What is the difference between JOSCAR Stage 1 and Stage 2?</summary>
+        <div class="faq-body"><p>Stage 1 is a basic registration level covering introductory compliance information. Stage 2 is the full assessment tier, involving a detailed review of health and safety, quality assurance, anti-bribery, information security, environmental management, and financial standing. Most prime contractor supply chains require Stage 2. Northpoint holds Stage 2 accreditation.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Which prime contractors use the JOSCAR register?</summary>
+        <div class="faq-body"><p>JOSCAR is used by the majority of the UK's defence and aerospace prime contractors, including BAE Systems, Babcock International, Leonardo UK, Rolls-Royce, QinetiQ, Thales UK, MBDA, and Serco. If your programme involves any of these organisations as prime or Tier 1 contractors, JOSCAR Stage 2 registration is typically a supply chain requirement.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>How do I verify Northpoint's JOSCAR status?</summary>
+        <div class="faq-body"><p>Our Stage 2 accreditation is publicly verifiable at any time through the <a class="body-link" href="#">JOSCAR portal at hellios.com</a>. Search for Northpoint Ltd. No prior contact with us is required to confirm our status. Alternatively, contact our compliance team directly for a copy of our current registration certificate.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Does Northpoint work on programmes outside the defence sector?</summary>
+        <div class="faq-body"><p>Yes. While our JOSCAR accreditation is specific to the defence, aerospace, and security supply chain, Northpoint works across multiple regulated sectors. We are one of only three UK companies approved to apply <a class="body-link" href="#">DWI-compliant coatings</a> for drinking water infrastructure, and we work with contractors on the UK's <a class="body-link" href="#">AMP8 water investment cycle</a>. Our compliance infrastructure applies across all the sectors we serve.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Does Northpoint need to be re-assessed each year?</summary>
+        <div class="faq-body"><p>Yes. JOSCAR Stage 2 is subject to annual renewal by Hellios. Our accreditation is reviewed and renewed against the current standard each year — so our status on the register always reflects our current compliance position, not a historic snapshot from initial registration.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLIANCE HUB -->
+<section class="section-grey">
+  <div class="container">
+    <div style="text-align: center;">
+      <h2>Compliance Hub</h2>
+      <div class="heading-divider"></div>
+      <p style="max-width: 600px; margin: 0 auto 28px;">Accreditation documentation available for download and review by supply chain qualification teams.</p>
+    </div>
+    <div class="download-grid">
+      <div class="download-card">
+        <h3>JOSCAR Registration Certificate</h3>
+        <p>Proof of our current Stage 2 accreditation status. Also verifiable independently via the JOSCAR portal.</p>
+        <a class="btn btn-primary" href="#">Request Certificate</a>
+      </div>
+      <div class="download-card">
+        <h3>ISO 9001 Quality Management Statement</h3>
+        <p>Our quality assurance framework, management system documentation, and scope of certification.</p>
+        <a class="btn btn-primary" href="#">Request Document</a>
+      </div>
+      <div class="download-card">
+        <h3>Environmental &amp; Health &amp; Safety Policy</h3>
+        <p>Our site-level environmental management commitments and health and safety management documentation.</p>
+        <a class="btn btn-primary" href="#">View Documents</a>
+      </div>
+      <div class="download-card">
+        <h3>Cyber Essentials Plus Certificate</h3>
+        <p>Our information security certification — demonstrating controls over data handling and cyber risk management.</p>
+        <a class="btn btn-primary" href="#">Request Certificate</a>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 22px; font-size: 14px;">For supply chain verification enquiries, <a class="body-link" href="#">contact our compliance team directly</a>.</p>
+  </div>
+</section>
+
+<!-- RELATED PAGES -->
+<section class="section-white">
+  <div class="container">
+    <div style="text-align: center;">
+      <h2>Related Pages</h2>
+      <div class="heading-divider"></div>
+    </div>
+    <div class="related-grid">
+      <div class="related-card" onclick="window.location='/protective-coating-for-the-defence-sector/'">
+        <div class="rc-img"></div>
+        <div class="rc-body">
+          <h3>Defence Sector Coatings</h3>
+          <p>How Northpoint supports defence manufacturers, system integrators, and MOD programmes with high-specification coating solutions.</p>
+        </div>
+      </div>
+      <div class="related-card" onclick="window.location='/amp8-coating-partner/'">
+        <div class="rc-img" style="background: linear-gradient(135deg,#0d4a6a,#009FE3) !important;"></div>
+        <div class="rc-body">
+          <h3>AMP8 Coating Partner</h3>
+          <p>Our DWI-compliant FBE coating capabilities for the UK water sector's £100bn+ AMP8 infrastructure investment cycle.</p>
+        </div>
+      </div>
+      <div class="related-card" onclick="window.location='/services/pipe-coatings/'">
+        <div class="rc-img" style="background: linear-gradient(135deg,#004a30,#009FE3) !important;"></div>
+        <div class="rc-body">
+          <h3>FBE &amp; Pipe Coatings</h3>
+          <p>Fusion bonded epoxy and specialist pipe coating services — Resicoat R4, Eurokote 468, Jotaguard VA 5001.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Contact Us If You Have a Project We Can Help With</h2>
+    <div class="btn-wrap">
+      <a class="btn btn-primary" href="#">Get in Touch</a>
+      <a class="btn btn-outline" href="#">+44 (0)161 330 4551</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div>
+        <div class="stat-number">Stage 2</div>
+        <div class="stat-label">JOSCAR Accredited</div>
+      </div>
+      <div>
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Years of Experience</div>
+      </div>
+      <div>
+        <div class="stat-number">ISO 9001</div>
+        <div class="stat-label">Quality Certified</div>
+      </div>
+      <div>
+        <div class="stat-number">1 of 3</div>
+        <div class="stat-label">UK DWI Approved Applicators</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

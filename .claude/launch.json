@@ -1,0 +1,41 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "kam-dashboard",
+      "runtimeExecutable": "/Users/jamesalderman/.nvm/versions/node/v20.18.2/bin/node",
+      "runtimeArgs": ["/Users/jamesalderman/Desktop/kam-dashboard/node_modules/.bin/vite"],
+      "port": 5173
+    },
+    {
+      "name": "behind-the-brief",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/jamesalderman/Desktop/behind-the-brief"],
+      "port": 3001
+    }
+  ,{
+      "name": "northpoint-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-p", "4321", "."],
+      "port": 4321
+    }
+  ,{
+      "name": "membracon-mockup",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-p", "4322", "/Users/jamesalderman/Desktop"],
+      "port": 4322
+    }
+  ,{
+      "name": "photofab-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-p", "4323", "/Users/jamesalderman/Desktop/kam-dashboard"],
+      "port": 4323
+    }
+  ,{
+      "name": "gallery",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-p", "4324", "/Users/jamesalderman/Desktop/david-alderman-gallery"],
+      "port": 4324
+    }
+  ]
+}

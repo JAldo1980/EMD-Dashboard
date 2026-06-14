@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photofab – Precision Photochemical Etching | UK Manufacturer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:    #0B1F3A;
+      --navy-mid:#122545;
+      --blue:    #1A3A6B;
+      --accent:  #E8751A;
+      --accent-h:#C4611A;
+      --teal:    #00A3C4;
+      --light:   #F4F6F9;
+      --white:   #ffffff;
+      --text:    #1C2B3A;
+      --muted:   #5A6A7A;
+      --border:  #D5DEE8;
+      --success: #00875A;
+      --font-head: 'Barlow Condensed', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text); background: #fff; overflow-x: hidden; }
+
+    /* ─── UTILITY ─── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 4px; font-weight: 700; font-size: 15px; cursor: pointer; border: none; text-decoration: none; transition: all .2s; letter-spacing: .3px; }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-h); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(232,117,26,.35); }
+    .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.5); }
+    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .btn-navy { background: var(--navy); color: #fff; }
+    .btn-navy:hover { background: var(--blue); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(11,31,58,.35); }
+    .btn-ghost { background: transparent; color: var(--accent); border: 2px solid var(--accent); }
+    .btn-ghost:hover { background: var(--accent); color: #fff; }
+    .tag { display: inline-block; padding: 6px 14px; background: rgba(0,163,196,.15); color: var(--teal); border: 1px solid rgba(0,163,196,.3); border-radius: 3px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+    .section-label { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+    .section-title { font-family: var(--font-head); font-size: clamp(32px, 4vw, 52px); font-weight: 800; line-height: 1.05; color: var(--navy); }
+    .section-title--white { color: #fff; }
+
+    /* ─── ANNOUNCEMENT BAR ─── */
+    .announce-bar {
+      background: var(--navy);
+      color: rgba(255,255,255,.85);
+      text-align: center;
+      font-size: 13px;
+      padding: 9px 16px;
+      letter-spacing: .3px;
+    }
+    .announce-bar strong { color: var(--accent); }
+    .announce-bar a { color: rgba(255,255,255,.9); text-decoration: underline; }
+
+    /* ─── HEADER ─── */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 16px rgba(0,0,0,.06);
+    }
+    .header-top {
+      background: var(--navy-mid);
+      padding: 7px 0;
+    }
+    .header-top-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-top-left { display: flex; align-items: center; gap: 20px; }
+    .header-contact-item {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 13px; color: rgba(255,255,255,.8);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .header-contact-item:hover { color: #fff; }
+    .header-contact-item svg { flex-shrink: 0; }
+    .header-top-right { display: flex; align-items: center; gap: 12px; }
+    .header-social { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 4px; background: rgba(255,255,255,.1); color: rgba(255,255,255,.8); transition: all .2s; }
+    .header-social:hover { background: var(--teal); color: #fff; }
+    .header-main { padding: 14px 0; }
+    .header-main-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo-mark {
+      width: 52px; height: 52px;
+      background: var(--navy);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-mark svg { width: 36px; height: 36px; }
+    .logo-text-wrap { display: flex; flex-direction: column; }
+    .logo-name { font-family: var(--font-head); font-size: 28px; font-weight: 800; color: var(--navy); letter-spacing: -0.5px; line-height: 1; }
+    .logo-sub { font-size: 10px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-top: 3px; }
+    .nav { display: flex; align-items: center; gap: 2px; }
+    .nav-item { position: relative; }
+    .nav-link { display: flex; align-items: center; gap: 4px; padding: 8px 14px; font-size: 14px; font-weight: 600; color: var(--text); text-decoration: none; border-radius: 4px; transition: all .2s; white-space: nowrap; }
+    .nav-link:hover { color: var(--navy); background: var(--light); }
+    .nav-link svg { width: 12px; height: 12px; opacity: .6; }
+    .dropdown {
+      display: none; position: absolute; top: calc(100% + 4px); left: 0;
+      min-width: 200px; background: #fff; border: 1px solid var(--border);
+      border-radius: 6px; box-shadow: 0 8px 32px rgba(0,0,0,.12);
+      padding: 6px 0; z-index: 100;
+    }
+    .nav-item:hover .dropdown { display: block; }
+    .dropdown a { display: block; padding: 9px 18px; font-size: 14px; color: var(--text); text-decoration: none; transition: background .15s; }
+    .dropdown a:hover { background: var(--light); color: var(--navy); }
+    .header-ctas { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .cta-phone { display: flex; flex-direction: column; align-items: flex-end; }
+    .cta-phone-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+    .cta-phone-num { font-size: 18px; font-weight: 800; color: var(--navy); letter-spacing: -.3px; line-height: 1.1; }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 90vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--navy);
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 60px 80px 80px;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-left::after {
+      content: '';
+      position: absolute; right: 0; top: 0; bottom: 0; width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,.15), transparent);
+    }
+    .hero-eyebrow { margin-bottom: 24px; }
+    .hero-h1 {
+      font-family: var(--font-head);
+      font-size: clamp(42px, 5vw, 72px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.0;
+      letter-spacing: -.5px;
+      margin-bottom: 20px;
+    }
+    .hero-h1 span { color: var(--accent); }
+    .hero-sub {
+      font-size: 17px;
+      color: rgba(255,255,255,.72);
+      line-height: 1.65;
+      max-width: 480px;
+      margin-bottom: 36px;
+    }
+    .hero-ctas { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+    .hero-text-link {
+      color: rgba(255,255,255,.75); font-size: 14px; font-weight: 600;
+      text-decoration: none; display: flex; align-items: center; gap: 6px;
+      transition: color .2s;
+    }
+    .hero-text-link:hover { color: #fff; }
+    .trust-bar {
+      display: flex; align-items: center; gap: 0;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 8px;
+      padding: 14px 0;
+      overflow: hidden;
+    }
+    .trust-item {
+      flex: 1;
+      display: flex; align-items: center; gap: 10px;
+      padding: 0 20px;
+      border-right: 1px solid rgba(255,255,255,.1);
+      min-width: 0;
+    }
+    .trust-item:last-child { border-right: none; }
+    .trust-icon { font-size: 18px; flex-shrink: 0; }
+    .trust-text { display: flex; flex-direction: column; min-width: 0; }
+    .trust-value { font-size: 14px; font-weight: 700; color: #fff; line-height: 1.2; }
+    .trust-label { font-size: 11px; color: rgba(255,255,255,.5); margin-top: 2px; }
+    .hero-right {
+      position: relative;
+      background: linear-gradient(135deg, var(--blue) 0%, #0d2a4e 100%);
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-video-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 50%, rgba(0,163,196,.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 30%, rgba(232,117,26,.08) 0%, transparent 50%),
+        linear-gradient(135deg, #0B1F3A 0%, #1a3a6b 100%);
+    }
+    .hero-graphic {
+      position: relative; z-index: 2;
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      padding: 40px;
+    }
+    .metal-sheet {
+      width: 420px; max-width: 100%;
+      background: linear-gradient(135deg, #8a9bb0 0%, #c8d4e0 30%, #a8b8c8 60%, #7a8fa8 100%);
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 40px 80px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.3);
+      position: relative;
+    }
+    .metal-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 6px;
+    }
+    .metal-cell {
+      aspect-ratio: 1;
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+    .metal-cell.etched {
+      background: linear-gradient(135deg, #2a3f58 0%, #1a2d45 100%);
+      box-shadow: inset 0 2px 4px rgba(0,0,0,.4);
+    }
+    .metal-cell.solid {
+      background: linear-gradient(135deg, #b8c8d8 0%, #d8e8f0 50%, #a8b8c8 100%);
+      box-shadow: 0 1px 3px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.4);
+    }
+    .metal-cell.half-etch {
+      background: linear-gradient(135deg, #7a9ab8 0%, #9ab4ca 50%, #6a8aa8 100%);
+      box-shadow: inset 0 1px 3px rgba(0,0,0,.25);
+    }
+    .hero-stats {
+      position: absolute;
+      right: -20px; top: 20px;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .hero-stat-pill {
+      background: rgba(255,255,255,.95);
+      border-radius: 50px;
+      padding: 10px 16px;
+      display: flex; align-items: center; gap: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.2);
+      white-space: nowrap;
+    }
+    .hero-stat-pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--success); flex-shrink: 0; }
+    .hero-stat-pill .dot.orange { background: var(--accent); }
+    .hero-stat-pill strong { font-size: 14px; font-weight: 700; color: var(--navy); }
+    .hero-stat-pill span { font-size: 12px; color: var(--muted); }
+    .video-badge {
+      position: absolute; bottom: 32px; left: 32px;
+      background: rgba(0,0,0,.7); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 50px; padding: 10px 18px;
+      display: flex; align-items: center; gap: 10px;
+      color: #fff; font-size: 13px; font-weight: 600;
+      cursor: pointer;
+    }
+    .play-btn {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--accent); display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ─── SECTION 2: WHY ETCHING ─── */
+    .why-etching { padding: 100px 0; background: #fff; }
+    .why-etching-header { text-align: center; margin-bottom: 60px; }
+    .why-etching-header p { font-size: 18px; color: var(--muted); max-width: 560px; margin: 16px auto 0; line-height: 1.6; }
+    .etching-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+    .etching-card {
+      background: #fff;
+      padding: 48px 40px;
+      position: relative;
+      transition: background .25s;
+    }
+    .etching-card:hover { background: #fafbfd; }
+    .etching-icon {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 20px rgba(11,31,58,.2);
+    }
+    .etching-icon svg { width: 28px; height: 28px; color: #fff; }
+    .etching-card h3 { font-family: var(--font-head); font-size: 26px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+    .etching-card p { font-size: 15px; color: var(--muted); line-height: 1.65; }
+    .vs-badge {
+      text-align: center; margin-top: 60px;
+      display: flex; align-items: center; gap: 20px; justify-content: center;
+    }
+    .vs-badge hr { flex: 1; border: none; border-top: 1px solid var(--border); }
+    .vs-badge-inner {
+      display: flex; gap: 10px; align-items: center;
+    }
+    .vs-chip {
+      padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 700;
+      letter-spacing: .5px;
+    }
+    .vs-chip.etch { background: rgba(0,163,196,.1); color: var(--teal); border: 1px solid rgba(0,163,196,.25); }
+    .vs-chip.vs { background: var(--light); color: var(--muted); }
+    .vs-chip.trad { background: rgba(90,106,122,.1); color: var(--muted); border: 1px solid rgba(90,106,122,.2); }
+    .comparison-table { margin-top: 40px; width: 100%; border-collapse: collapse; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+    .comparison-table th {
+      padding: 14px 20px; font-size: 13px; font-weight: 700; text-align: left;
+      letter-spacing: .5px; text-transform: uppercase;
+    }
+    .comparison-table th:first-child { background: var(--light); color: var(--muted); }
+    .comparison-table th.etch-col { background: var(--navy); color: #fff; }
+    .comparison-table th.trad-col { background: var(--light); color: var(--muted); }
+    .comparison-table td { padding: 13px 20px; font-size: 14px; border-top: 1px solid var(--border); }
+    .comparison-table tr:hover td { background: #fafbfd; }
+    .comparison-table td:first-child { font-weight: 600; color: var(--text); }
+    .tick { color: var(--success); font-weight: 700; }
+    .cross { color: #e53e3e; }
+    .neutral { color: var(--muted); }
+
+    /* ─── SECTION 3: CAPABILITIES GRID ─── */
+    .capabilities { padding: 100px 0; background: var(--light); }
+    .capabilities-header { text-align: center; margin-bottom: 50px; }
+    .tab-nav {
+      display: flex; justify-content: center; gap: 4px;
+      background: #fff; border-radius: 8px; padding: 6px;
+      border: 1px solid var(--border);
+      width: fit-content; margin: 0 auto 48px;
+    }
+    .tab-btn {
+      padding: 10px 24px; border: none; background: transparent;
+      font-size: 14px; font-weight: 600; color: var(--muted); cursor: pointer;
+      border-radius: 6px; transition: all .2s; white-space: nowrap;
+    }
+    .tab-btn.active { background: var(--navy); color: #fff; box-shadow: 0 2px 8px rgba(11,31,58,.2); }
+    .tab-btn:hover:not(.active) { background: var(--light); color: var(--text); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .cap-card {
+      background: #fff; border-radius: 10px; padding: 28px;
+      border: 1px solid var(--border); transition: all .25s;
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .cap-card:hover { border-color: var(--teal); box-shadow: 0 4px 20px rgba(0,163,196,.1); transform: translateY(-2px); }
+    .cap-card-icon {
+      width: 40px; height: 40px; border-radius: 8px;
+      background: linear-gradient(135deg, rgba(0,163,196,.15) 0%, rgba(0,163,196,.05) 100%);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      color: var(--teal); font-size: 18px;
+    }
+    .cap-card h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .cap-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .cap-highlight {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      color: #fff; border-color: transparent;
+    }
+    .cap-highlight h4, .cap-highlight p { color: rgba(255,255,255,.9); }
+    .cap-highlight .cap-card-icon { background: rgba(255,255,255,.1); color: #fff; }
+    .cap-highlight:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(11,31,58,.3); }
+
+    /* ─── SECTION 4: INDUSTRY GATEWAYS ─── */
+    .industries { padding: 100px 0; background: #fff; }
+    .industries-header { text-align: center; margin-bottom: 60px; }
+    .industries-header p { font-size: 18px; color: var(--muted); max-width: 520px; margin: 16px auto 0; line-height: 1.6; }
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto auto;
+      gap: 16px;
+    }
+    .industry-card {
+      position: relative; overflow: hidden; border-radius: 12px;
+      cursor: pointer; min-height: 280px;
+      background: var(--navy);
+    }
+    .industry-card:nth-child(1) { grid-column: span 5; }
+    .industry-card:nth-child(2) { grid-column: span 7; }
+    .industry-card:nth-child(3) { grid-column: span 4; }
+    .industry-card:nth-child(4) { grid-column: span 4; }
+    .industry-card:nth-child(5) { grid-column: span 4; }
+    .ind-bg {
+      position: absolute; inset: 0;
+      transition: transform .5s ease;
+    }
+    .industry-card:hover .ind-bg { transform: scale(1.05); }
+    .ind-bg-1 { background: linear-gradient(135deg, #0d1f3c 0%, #1a3a6b 40%, #0d2d5c 100%); }
+    .ind-bg-2 { background: linear-gradient(135deg, #1a2a1a 0%, #2d4a2d 40%, #1a3a2a 100%); }
+    .ind-bg-3 { background: linear-gradient(135deg, #1a1a2e 0%, #2d2d5c 40%, #1a1a3c 100%); }
+    .ind-bg-4 { background: linear-gradient(135deg, #2e1a0a 0%, #5c3a1a 40%, #3c2a0a 100%); }
+    .ind-bg-5 { background: linear-gradient(135deg, #0a2e1a 0%, #1a5c3a 40%, #0a3c2a 100%); }
+    .ind-pattern {
+      position: absolute; inset: 0; opacity: .07;
+      background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,1) 10px, rgba(255,255,255,1) 11px);
+    }
+    .ind-content {
+      position: absolute; inset: 0;
+      padding: 32px;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      background: linear-gradient(to top, rgba(0,0,0,.7) 0%, transparent 60%);
+      transition: background .3s;
+    }
+    .industry-card:hover .ind-content { background: linear-gradient(to top, rgba(0,0,0,.85) 0%, rgba(0,0,0,.2) 100%); }
+    .ind-sector-tag {
+      display: inline-block; padding: 5px 12px;
+      background: rgba(255,255,255,.15); backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,.2); border-radius: 20px;
+      font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      color: #fff; margin-bottom: 12px; width: fit-content;
+    }
+    .ind-content h3 { font-family: var(--font-head); font-size: 26px; font-weight: 700; color: #fff; margin-bottom: 8px; line-height: 1.1; }
+    .ind-detail {
+      font-size: 14px; color: rgba(255,255,255,.7); line-height: 1.5;
+      max-height: 0; overflow: hidden; transition: max-height .4s ease, opacity .3s;
+      opacity: 0;
+    }
+    .industry-card:hover .ind-detail { max-height: 120px; opacity: 1; }
+    .ind-link {
+      display: flex; align-items: center; gap: 6px;
+      color: var(--accent); font-size: 13px; font-weight: 700;
+      margin-top: 12px; opacity: 0; transition: opacity .3s;
+      text-decoration: none;
+    }
+    .industry-card:hover .ind-link { opacity: 1; }
+    .ind-icon {
+      position: absolute; top: 32px; right: 32px;
+      width: 52px; height: 52px; border-radius: 10px;
+      background: rgba(255,255,255,.1); backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+    }
+
+    /* ─── SECTION 5: TAB SIMULATOR ─── */
+    .simulator { padding: 100px 0; background: var(--navy); }
+    .simulator-header { text-align: center; margin-bottom: 60px; }
+    .simulator-header p { font-size: 17px; color: rgba(255,255,255,.6); max-width: 580px; margin: 16px auto 0; line-height: 1.65; }
+    .simulator-inner { display: grid; grid-template-columns: 340px 1fr; gap: 40px; align-items: start; }
+    .sim-panel { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; overflow: hidden; }
+    .sim-panel-header { padding: 20px 24px; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .sim-panel-header h4 { font-size: 14px; font-weight: 700; color: rgba(255,255,255,.8); letter-spacing: .5px; text-transform: uppercase; }
+    .tab-style-list { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+    .tab-style-btn {
+      display: flex; align-items: center; gap: 14px; padding: 14px 16px;
+      border-radius: 8px; border: 1px solid rgba(255,255,255,.08);
+      background: transparent; cursor: pointer; transition: all .2s; width: 100%; text-align: left;
+    }
+    .tab-style-btn:hover, .tab-style-btn.active { background: rgba(255,255,255,.08); border-color: var(--teal); }
+    .tab-style-btn.active { box-shadow: 0 0 0 1px var(--teal); }
+    .tab-style-icon {
+      width: 36px; height: 36px; border-radius: 6px; flex-shrink: 0;
+      background: rgba(255,255,255,.08); display: flex; align-items: center; justify-content: center;
+    }
+    .tab-style-text { display: flex; flex-direction: column; }
+    .tab-style-name { font-size: 14px; font-weight: 600; color: rgba(255,255,255,.9); }
+    .tab-style-desc { font-size: 12px; color: rgba(255,255,255,.45); margin-top: 2px; }
+    .thickness-section { padding: 16px 20px; border-top: 1px solid rgba(255,255,255,.08); }
+    .thickness-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,.5); margin-bottom: 12px; }
+    .thickness-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .thickness-pill {
+      padding: 7px 14px; border-radius: 20px; border: 1px solid rgba(255,255,255,.15);
+      background: transparent; color: rgba(255,255,255,.6); font-size: 13px; font-weight: 600;
+      cursor: pointer; transition: all .2s;
+    }
+    .thickness-pill:hover, .thickness-pill.active { background: var(--teal); border-color: var(--teal); color: #fff; }
+    .sim-display { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; overflow: hidden; }
+    .sim-display-header { padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,.08); display: flex; justify-content: space-between; align-items: center; }
+    .sim-display-title { font-size: 13px; font-weight: 600; color: rgba(255,255,255,.6); }
+    .sim-display-meta { font-size: 12px; color: var(--teal); font-weight: 600; }
+    .sim-canvas { padding: 48px; display: flex; align-items: center; justify-content: center; min-height: 360px; }
+    .sheet-viz { position: relative; }
+    .sheet-frame {
+      width: 480px;
+      background: linear-gradient(135deg, #c0cfe0 0%, #ddeaf5 50%, #b0c0d8 100%);
+      border-radius: 6px; padding: 20px; box-shadow: 0 20px 60px rgba(0,0,0,.4);
+      border: 1px solid rgba(255,255,255,.2);
+    }
+    .sheet-components-row { display: flex; gap: 12px; margin-bottom: 12px; justify-content: center; }
+    .sheet-component {
+      background: linear-gradient(135deg, #8a9db8 0%, #aabdd4 50%, #7a8daa 100%);
+      border-radius: 4px; transition: all .3s;
+      box-shadow: 0 2px 6px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.3);
+      position: relative;
+    }
+    .sheet-component.w-sm { width: 80px; height: 60px; }
+    .sheet-component.w-md { width: 120px; height: 60px; }
+    .sheet-component.w-lg { width: 160px; height: 80px; }
+    .tab-connector {
+      position: absolute; background: linear-gradient(135deg, #8a9db8, #aabdd4);
+      transition: all .3s;
+    }
+    .tab-micro { width: 6px; height: 12px; bottom: -12px; left: 50%; transform: translateX(-50%); }
+    .tab-standard { width: 10px; height: 16px; bottom: -16px; left: 50%; transform: translateX(-50%); }
+    .tab-bridge { width: 14px; height: 20px; bottom: -20px; left: 50%; transform: translateX(-50%); border-radius: 2px 2px 0 0; }
+    .tab-perforated {
+      width: 10px; height: 16px; bottom: -16px; left: 50%; transform: translateX(-50%);
+      background: repeating-linear-gradient(#8a9db8 0px, #8a9db8 4px, transparent 4px, transparent 6px);
+    }
+    .sim-specs { padding: 24px; border-top: 1px solid rgba(255,255,255,.08); display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .sim-spec { display: flex; flex-direction: column; }
+    .sim-spec-value { font-size: 22px; font-weight: 800; color: #fff; line-height: 1; }
+    .sim-spec-label { font-size: 12px; color: rgba(255,255,255,.45); margin-top: 4px; }
+
+    /* ─── SECTION 6: HUMAN ELEMENT ─── */
+    .human-element { padding: 100px 0; background: var(--light); }
+    .human-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .human-img-wrap { position: relative; }
+    .human-img {
+      width: 100%; aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #c8d8e8 0%, #e8f0f8 50%, #b8c8d8 100%);
+      border-radius: 12px; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,.12);
+    }
+    .team-placeholder {
+      display: flex; flex-direction: column; align-items: center; gap: 12px;
+      color: var(--muted);
+    }
+    .team-avatars { display: flex; gap: -8px; }
+    .team-avatar {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      border: 3px solid #fff;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 18px; font-weight: 700;
+      margin-left: -8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    }
+    .team-avatar:first-child { margin-left: 0; }
+    .human-img-badge {
+      position: absolute; bottom: -20px; right: -20px;
+      background: #fff; border-radius: 10px; padding: 18px 22px;
+      box-shadow: 0 10px 40px rgba(0,0,0,.12); border: 1px solid var(--border);
+    }
+    .badge-top { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+    .badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--success); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .4; } }
+    .badge-text { font-size: 13px; font-weight: 700; color: var(--navy); }
+    .badge-sub { font-size: 12px; color: var(--muted); }
+    .human-content {}
+    .human-content .section-label { margin-bottom: 8px; }
+    .human-content h2 { margin-bottom: 24px; }
+    .human-content p { font-size: 16px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
+    blockquote {
+      border-left: 3px solid var(--accent);
+      padding: 16px 24px;
+      background: #fff;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+      font-style: italic;
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    .manager-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 28px; }
+    .manager-card {
+      background: #fff; border-radius: 8px; padding: 16px;
+      border: 1px solid var(--border); display: flex; align-items: center; gap: 12px;
+    }
+    .manager-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 700; font-size: 15px; flex-shrink: 0;
+    }
+    .manager-info h5 { font-size: 14px; font-weight: 700; color: var(--navy); }
+    .manager-info span { font-size: 12px; color: var(--muted); }
+
+    /* ─── SECTION 7: SPLIT CTA ─── */
+    .split-cta { display: grid; grid-template-columns: 1fr 1fr; min-height: 380px; }
+    .split-cta-left { background: var(--accent); padding: 72px 64px; display: flex; flex-direction: column; justify-content: center; }
+    .split-cta-right { background: var(--navy); padding: 72px 64px; display: flex; flex-direction: column; justify-content: center; position: relative; }
+    .split-cta-right::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,.15), transparent);
+    }
+    .split-cta h3 { font-family: var(--font-head); font-size: 34px; font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
+    .split-cta-left h3 { color: #fff; }
+    .split-cta-right h3 { color: #fff; }
+    .split-cta p { font-size: 15px; margin-bottom: 32px; line-height: 1.6; }
+    .split-cta-left p { color: rgba(255,255,255,.8); }
+    .split-cta-right p { color: rgba(255,255,255,.6); }
+    .split-cta-left .btn { background: #fff; color: var(--accent); font-weight: 800; }
+    .split-cta-left .btn:hover { background: rgba(255,255,255,.92); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+    .split-cta-right .btn { background: rgba(255,255,255,.1); color: #fff; border: 2px solid rgba(255,255,255,.3); }
+    .split-cta-right .btn:hover { background: rgba(255,255,255,.15); border-color: rgba(255,255,255,.5); transform: translateY(-2px); }
+
+    /* ─── NEWS STRIP ─── */
+    .news-strip { padding: 80px 0; background: #fff; }
+    .news-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; }
+    .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .news-card {
+      border-radius: 10px; overflow: hidden; border: 1px solid var(--border);
+      transition: all .25s;
+    }
+    .news-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.1); border-color: transparent; }
+    .news-card-img {
+      height: 180px; background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center; font-size: 40px;
+    }
+    .news-card-body { padding: 24px; }
+    .news-tag { display: inline-block; margin-bottom: 10px; padding: 4px 10px; background: var(--light); border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: var(--muted); }
+    .news-card h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.35; }
+    .news-card p { font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+    /* ─── FOOTER ─── */
+    .footer { background: #070f1f; color: rgba(255,255,255,.65); }
+    .footer-main { padding: 64px 0; display: grid; grid-template-columns: 280px 1fr 1fr 1fr; gap: 48px; }
+    .footer-brand {}
+    .footer-logo-name { font-family: var(--font-head); font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+    .footer-logo-sub { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 20px; }
+    .footer-desc { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,.5); margin-bottom: 24px; }
+    .footer-contact-item { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 14px; }
+    .footer-contact-item a { color: rgba(255,255,255,.65); text-decoration: none; transition: color .2s; }
+    .footer-contact-item a:hover { color: #fff; }
+    .footer-heading { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,.35); margin-bottom: 16px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 14px; color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-certs { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+    .cert-badge {
+      padding: 8px 12px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 6px; font-size: 11px; font-weight: 700; color: rgba(255,255,255,.6); letter-spacing: .5px;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06); padding: 20px 0;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom p { font-size: 13px; color: rgba(255,255,255,.3); }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { font-size: 13px; color: rgba(255,255,255,.35); text-decoration: none; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,.7); }
+    .footer-socials { display: flex; gap: 10px; margin-top: 20px; }
+    .footer-social {
+      width: 36px; height: 36px; border-radius: 6px; background: rgba(255,255,255,.06);
+      display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.5);
+      text-decoration: none; transition: all .2s;
+    }
+    .footer-social:hover { background: var(--teal); color: #fff; }
+
+    /* ─── ENQUIRY MODAL ─── */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,.65); backdrop-filter: blur(4px);
+      z-index: 9999; align-items: center; justify-content: center; padding: 24px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: #fff; border-radius: 12px; width: 100%; max-width: 560px;
+      overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,.3);
+      animation: modal-in .25s ease;
+    }
+    @keyframes modal-in { from { opacity: 0; transform: scale(.96) translateY(8px); } }
+    .modal-header {
+      background: var(--navy); padding: 28px 32px;
+      display: flex; align-items: flex-start; justify-content: space-between;
+    }
+    .modal-header h3 { font-family: var(--font-head); font-size: 26px; font-weight: 700; color: #fff; }
+    .modal-header p { font-size: 14px; color: rgba(255,255,255,.6); margin-top: 4px; }
+    .modal-close { background: rgba(255,255,255,.1); border: none; border-radius: 6px; width: 32px; height: 32px; cursor: pointer; color: rgba(255,255,255,.7); font-size: 18px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background .2s; }
+    .modal-close:hover { background: rgba(255,255,255,.2); }
+    .modal-body { padding: 32px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 6px;
+      font-size: 14px; color: var(--text); background: #fff; outline: none; transition: border .2s;
+      font-family: var(--font-body);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(0,163,196,.1); }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .upload-zone {
+      border: 2px dashed var(--border); border-radius: 6px; padding: 24px;
+      text-align: center; cursor: pointer; transition: all .2s; background: var(--light);
+    }
+    .upload-zone:hover { border-color: var(--teal); background: rgba(0,163,196,.04); }
+    .upload-zone p { font-size: 14px; color: var(--muted); }
+    .upload-zone span { font-size: 12px; color: rgba(90,106,122,.7); display: block; margin-top: 4px; }
+    .form-submit { background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 14px 28px; font-size: 15px; font-weight: 700; cursor: pointer; width: 100%; transition: background .2s; font-family: var(--font-body); }
+    .form-submit:hover { background: var(--accent-h); }
+    .form-privacy { font-size: 12px; color: var(--muted); text-align: center; margin-top: 12px; }
+    .guarantee-row { display: flex; gap: 16px; margin-bottom: 24px; }
+    .guarantee-item { flex: 1; background: var(--light); border-radius: 6px; padding: 12px 14px; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--navy); }
+
+    /* ─── STICKY ENQUIRE BTN ─── */
+    .sticky-enquire {
+      position: fixed; bottom: 28px; right: 28px; z-index: 500;
+      background: var(--accent); color: #fff; border: none;
+      border-radius: 50px; padding: 14px 24px; font-size: 14px; font-weight: 700;
+      cursor: pointer; display: flex; align-items: center; gap: 10px;
+      box-shadow: 0 8px 32px rgba(232,117,26,.4); transition: all .25s;
+      font-family: var(--font-body);
+    }
+    .sticky-enquire:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(232,117,26,.5); }
+    .sticky-enquire .pulse-ring {
+      width: 10px; height: 10px; border-radius: 50%; background: #fff;
+      position: relative;
+    }
+    .sticky-enquire .pulse-ring::after {
+      content: ''; position: absolute; inset: -4px; border-radius: 50%;
+      border: 2px solid rgba(255,255,255,.5); animation: ring-pulse 1.5s infinite;
+    }
+    @keyframes ring-pulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(2); opacity: 0; } }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-right { display: none; }
+      .hero-left { padding: 60px 40px; }
+      .trust-bar { flex-wrap: wrap; }
+      .trust-item { flex: none; width: 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
+      .simulator-inner { grid-template-columns: 1fr; }
+      .human-inner { grid-template-columns: 1fr; gap: 40px; }
+      .split-cta { grid-template-columns: 1fr; }
+      .footer-main { grid-template-columns: 1fr 1fr; }
+      .etching-grid { grid-template-columns: 1fr; }
+      .industry-grid { grid-template-columns: 1fr; }
+      .industry-card { grid-column: span 1 !important; }
+    }
+    @media (max-width: 768px) {
+      .nav, .header-top { display: none; }
+      .header-ctas .btn { display: none; }
+      .news-grid { grid-template-columns: 1fr; }
+      .tab-panel.active { grid-template-columns: 1fr; }
+      .manager-cards { grid-template-columns: 1fr; }
+      .footer-main { grid-template-columns: 1fr; }
+      .split-cta-left, .split-cta-right { padding: 48px 32px; }
+      .hero-left { padding: 48px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announce-bar">
+  🚀 <strong>48-Hour Prototypes:</strong> CAD to flat etched components in 48 hours. <a href="#">Upload your design now →</a>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top-inner">
+        <div class="header-top-left">
+          <a href="tel:01480226686" class="header-contact-item">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 12 19.79 19.79 0 01.44 3.38 2 2 0 012.42 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.37a16 16 0 006.72 6.72l1.73-1.73a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            01480 226686
+          </a>
+          <a href="mailto:enquiries@photofab.co.uk" class="header-contact-item">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            enquiries@photofab.co.uk
+          </a>
+        </div>
+        <div class="header-top-right">
+          <a href="#" class="header-social" title="LinkedIn">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="header-social" title="YouTube">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-main">
+    <div class="container">
+      <div class="header-main-inner">
+        <a href="#" class="logo">
+          <div class="logo-mark">
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="12" height="12" rx="1" fill="white" opacity=".9"/>
+              <rect x="20" y="4" width="12" height="12" rx="1" fill="white" opacity=".5"/>
+              <rect x="4" y="20" width="12" height="12" rx="1" fill="white" opacity=".5"/>
+              <rect x="20" y="20" width="12" height="12" rx="1" fill="#E8751A" opacity=".9"/>
+            </svg>
+          </div>
+          <div class="logo-text-wrap">
+            <span class="logo-name">Photofab</span>
+            <span class="logo-sub">Precision Etching</span>
+          </div>
+        </a>
+        <nav class="nav">
+          <div class="nav-item">
+            <a href="#" class="nav-link">Chemical Etching</a>
+          </div>
+          <div class="nav-item">
+            <a href="#" class="nav-link">Services <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+            <div class="dropdown">
+              <a href="#">Chemical Milling/Etching</a>
+              <a href="#">Sheet Metal Forming</a>
+              <a href="#">Metal Plating & Finishing</a>
+              <a href="#">Laser Cutting</a>
+              <a href="#">Prototyping to High Volume</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="#" class="nav-link">Industries <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+            <div class="dropdown">
+              <a href="#">Aerospace & Defence</a>
+              <a href="#">Electronics</a>
+              <a href="#">Medical & Bio-Tech</a>
+              <a href="#">Green Energy</a>
+              <a href="#">Automotive</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="#" class="nav-link">Products</a>
+          </div>
+          <div class="nav-item">
+            <a href="#" class="nav-link">Company <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+            <div class="dropdown">
+              <a href="#">About Photofab</a>
+              <a href="#">Our Team</a>
+              <a href="#">Quality & Accreditations</a>
+              <a href="#">News & Resources</a>
+              <a href="#">Careers</a>
+            </div>
+          </div>
+        </nav>
+        <div class="header-ctas">
+          <button class="btn btn-outline" style="color:var(--navy); border-color:var(--border); font-size:13px; padding:10px 18px;" onclick="openModal('engineer')">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            Speak to an Engineer
+          </button>
+          <button class="btn btn-primary" onclick="openModal('cad')">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Upload CAD for Quote
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- SECTION 1: HERO                         -->
+<!-- ═══════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <span class="tag">Precision Photochemical Etching</span>
+    </div>
+    <h1 class="hero-h1">
+      Precision Metal<br>Components.<br>
+      <span>CAD to Prototype<br>in 48 Hours.</span>
+    </h1>
+    <p class="hero-sub">
+      Backed by an SC21 Bronze aerospace accreditation, a 98% on-time delivery rate, and 55+ years of engineering mastery. If you can draw it, we can etch it—completely burr- and stress-free.
+    </p>
+    <div class="hero-ctas">
+      <button class="btn btn-primary" style="font-size:15px; padding:16px 32px;" onclick="openModal('cad')">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        Upload CAD for 24-Hr Quote
+      </button>
+      <a href="#" class="hero-text-link" onclick="openModal('engineer'); return false;">
+        Speak with a Technical Engineer
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="trust-bar">
+      <div class="trust-item">
+        <span class="trust-icon">⭐</span>
+        <div class="trust-text">
+          <span class="trust-value">4.8 / 5 Rating</span>
+          <span class="trust-label">Verified Hotjar</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">📦</span>
+        <div class="trust-text">
+          <span class="trust-value">98% On-Time</span>
+          <span class="trust-label">Delivery Rate</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🛡️</span>
+        <div class="trust-text">
+          <span class="trust-value">SC21 Bronze</span>
+          <span class="trust-label">Aerospace Certified</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🇬🇧</span>
+        <div class="trust-text">
+          <span class="trust-value">UK Facility</span>
+          <span class="trust-label">St Neots, Cambs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-video-bg"></div>
+    <div class="hero-graphic">
+      <div class="metal-sheet" id="metalSheet">
+        <div class="metal-grid" id="metalGrid"></div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat-pill">
+          <span class="dot"></span>
+          <strong>±0.025mm</strong>
+          <span>Tolerance</span>
+        </div>
+        <div class="hero-stat-pill">
+          <span class="dot orange"></span>
+          <strong>48hr</strong>
+          <span>Prototype</span>
+        </div>
+        <div class="hero-stat-pill">
+          <span class="dot"></span>
+          <strong>55+ Years</strong>
+          <span>Est. 1968</span>
+        </div>
+      </div>
+    </div>
+    <div class="video-badge">
+      <div class="play-btn">▶</div>
+      Watch: Etching Process
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- SECTION 2: WHY ETCHING                  -->
+<!-- ═══════════════════════════════════════ -->
+<section class="why-etching">
+  <div class="container">
+    <div class="why-etching-header">
+      <div class="section-label">The Alternative You Haven't Considered</div>
+      <h2 class="section-title">Eliminating Thermal Stress<br>and Costly Tooling.</h2>
+      <p>Why more aerospace, medical, and electronics engineers are switching from stamping and laser cutting to photochemical etching.</p>
+    </div>
+    <div class="etching-grid">
+      <div class="etching-card">
+        <div class="etching-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3>Zero Tooling Wear</h3>
+        <p>Digital tooling means design modifications cost nothing and lead times don't stretch. Iterate on your geometry freely — from prototype to production, your first quote is your final quote.</p>
+      </div>
+      <div class="etching-card">
+        <div class="etching-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <h3>100% Burr-Free</h3>
+        <p>Chemical removal ensures pristine edge quality without the mechanical stress or deformations caused by stamping or laser cutting. Every edge is dimensionally perfect under microscope inspection.</p>
+      </div>
+      <div class="etching-card">
+        <div class="etching-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3>Intricate Geometry</h3>
+        <p>Complexity doesn't increase cost. Etch ultra-fine meshes, variable depths, and complex profiles simultaneously on a single sheet — what takes multiple stamping operations costs the same as a simple part.</p>
+      </div>
+    </div>
+
+    <div class="vs-badge">
+      <hr /><div class="vs-badge-inner">
+        <span class="vs-chip etch">Photofab Etching</span>
+        <span class="vs-chip vs">vs</span>
+        <span class="vs-chip trad">Traditional Methods</span>
+      </div><hr />
+    </div>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Process Attribute</th>
+          <th class="etch-col">Photochemical Etching</th>
+          <th class="trad-col">Stamping / Laser</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Tooling Cost</td><td class="tick">✓ Digital — virtually zero</td><td class="cross">✗ Hard tooling £1,000–£50,000</td></tr>
+        <tr><td>Thermal Distortion</td><td class="tick">✓ Zero — chemical process</td><td class="cross">✗ HAZ on laser; deformation on stamping</td></tr>
+        <tr><td>Edge Quality</td><td class="tick">✓ 100% burr-free, stress-free</td><td class="cross">✗ Deburring required</td></tr>
+        <tr><td>Prototype Lead Time</td><td class="tick">✓ 24–48 hours</td><td class="cross">✗ 4–16 weeks for new tooling</td></tr>
+        <tr><td>Complex Geometry</td><td class="tick">✓ No cost premium</td><td class="neutral">≈ Increases cost substantially</td></tr>
+        <tr><td>Min. Material Thickness</td><td class="tick">✓ Down to 0.010mm</td><td class="cross">✗ Limited by tooling rigidity</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- SECTION 3: CAPABILITIES GRID            -->
+<!-- ═══════════════════════════════════════ -->
+<section class="capabilities">
+  <div class="container">
+    <div class="capabilities-header">
+      <div class="section-label">What We Do Best</div>
+      <h2 class="section-title">Our Capabilities</h2>
+    </div>
+    <div class="tab-nav" role="tablist">
+      <button class="tab-btn active" onclick="switchTab('rapid')" role="tab">Rapid Prototyping</button>
+      <button class="tab-btn" onclick="switchTab('precision')" role="tab">Precision Engineering</button>
+      <button class="tab-btn" onclick="switchTab('supply')" role="tab">Supply Chain</button>
+    </div>
+    <div id="tab-rapid" class="tab-panel active">
+      <div class="cap-card cap-highlight">
+        <div class="cap-card-icon">⚡</div>
+        <div>
+          <h4>24-Hour Flat Part Turnaround</h4>
+          <p>CAD file to etched flat part in under 24 hours. The fastest prototype-to-hands turnaround in UK precision manufacturing.</p>
+        </div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card-icon">💬</div>
+        <div>
+          <h4>24-Hour Rapid Quote Response</h4>
+          <p>Guaranteed technical quote response within 24 hours of CAD upload. No back-and-forth, no delays.</p>
+        </div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card-icon">📐</div>
+        <div>
+          <h4>No Minimum Order Quantities</h4>
+          <p>Order 1 prototype part or 100,000 production components. Our digital process scales without penalty.</p>
+        </div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card-icon">💾</div>
+        <div>
+          <h4>Low-Cost Digital Tooling</h4>
+          <p>Phototools are created digitally from your CAD. Modify geometry between iterations at no additional tooling cost.</p>
+        </div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card-icon">🔄</div>
+        <div>
+          <h4>Iterative Design Support</h4>
+          <p>Our engineers review CAD files for etchability before manufacturing begins — preventing costly revision cycles.</p>
+        </div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card-icon">📁</div>
+        <div>
+          <h4>Electronic File Handling</h4>
+          <p>DXF, DWG, STEP, Gerber — we handle all standard CAD formats with full digital traceability from file to finished part.</p>
+        </div>
+      </div>
+    </div>
+    <div id="tab-precision" class="tab-panel">
+      <div class="cap-card cap-highlight">
+        <div class="cap-card-icon">🎯</div>
+        <div>
+          <h4>Tolerances Down to ±0.025mm</h4>
+          <p>Industry-leading dimensional accuracy across all metals — achieving tolerances that stamping and laser cutting physically cannot match.</p>
+        </div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card-icon">✨</div>
+        <div>
+          <h4>100% Burr- and Stress-Free</h4>
+          <p>The chemical process removes material rather than displacing it — delivering edge quality that requires zero secondary finishing operations.</p>
+        </div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card-icon">🔬</div>
+        <div>
+          <h4>Etch Depth Accuracy to Micron</h4>
+          <p>Control etch depth precisely — critical for creating microfluidic channels, flow plates, and depth-profiled components.</p>
+        </div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card-icon">📏</div>
+        <div>
+          <h4>Advanced Half-Etch Scoring</h4>
+          <p>Create fold lines and depth features in the same operation as the profile etch — no additional processes required.</p>
+        </div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card-icon">🧲</div>
+        <div>
+          <h4>Wide Material Range</h4>
+          <p>Stainless steel, titanium, copper, beryllium copper, Kovar, Invar, nickel alloys, aluminium — any machinable metal.</p>
+        </div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card-icon">🔩</div>
+        <div>
+          <h4>Sheet Metal Forming</h4>
+          <p>Post-etch 3D forming to create complex shapes — brackets, springs, shields — from etched blanks without tooling investment.</p>
+        </div>
+      </div>
+    </div>
+    <div id="tab-supply" class="tab-panel">
+      <div class="cap-card cap-highlight">
+        <div class="cap-card-icon">🛡️</div>
+        <div>
+          <h4>SC21 Bronze Certified</h4>
+          <p>Formally assessed and accredited under the SC21 aerospace and defence supply chain improvement programme. Your NADCAP compliance starts here.</p>
+        </div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card-icon">📦</div>
+        <div>
+          <h4>98% On-Time Delivery</h4>
+          <p>Measured, reported, and audited. Our scheduling systems are built around your delivery commitments — not production convenience.</p>
+        </div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card-icon">🏭</div>
+        <div>
+          <h4>In-House UK Manufacturing</h4>
+          <p>All etching, forming, plating, and finishing conducted under one roof at our St Neots facility. No sub-contracting risk.</p>
+        </div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card-icon">🔍</div>
+        <div>
+          <h4>Full Batch Traceability</h4>
+          <p>Material certs, process records, and inspection data retained per batch. Supports full AS9100 and ISO audit requirements.</p>
+        </div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card-icon">📋</div>
+        <div>
+          <h4>ISO 9001 / 14001 / 45001</h4>
+          <p>Triple ISO accreditation covering quality management, environmental, and occupational health — demonstrating systematic operational excellence.</p>
+        </div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-card-icon">🤝</div>
+        <div>
+          <h4>Dedicated Account Managers</h4>
+          <p>Single point of contact from order placement to delivery. Direct phone and email — no ticketing systems or call centres.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- SECTION 4: INDUSTRY GATEWAYS            -->
+<!-- ═══════════════════════════════════════ -->
+<section class="industries">
+  <div class="container">
+    <div class="industries-header">
+      <div class="section-label">Sector Expertise</div>
+      <h2 class="section-title">Engineered for<br>Industry-Critical Standards.</h2>
+      <p>From aerospace mission-critical to hydrogen green energy — hover any sector to see how we engineer for your specific requirements.</p>
+    </div>
+    <div class="industry-grid">
+      <div class="industry-card">
+        <div class="ind-bg ind-bg-1"></div>
+        <div class="ind-pattern"></div>
+        <div class="ind-icon">✈️</div>
+        <div class="ind-content">
+          <span class="ind-sector-tag">Aerospace & Defence</span>
+          <h3>Mission-Critical Components</h3>
+          <div class="ind-detail">Manufactured under strict SC21 supply chain traceability. Full material and process certification to support AS9100 and NADCAP qualification programmes.</div>
+          <a href="#" class="ind-link">Explore sector <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="industry-card">
+        <div class="ind-bg ind-bg-2"></div>
+        <div class="ind-pattern"></div>
+        <div class="ind-icon">⚡</div>
+        <div class="ind-content">
+          <span class="ind-sector-tag">Electronics & Semiconductors</span>
+          <h3>EMI / RFI Shielding & Leadframes</h3>
+          <div class="ind-detail">Ultra-dense EMI/RFI shielding cans, leadframes, and busbars etched with zero thermal distortion. Critical for high-frequency applications where dimensional tolerance cannot be compromised.</div>
+          <a href="#" class="ind-link">Explore sector <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="industry-card">
+        <div class="ind-bg ind-bg-3"></div>
+        <div class="ind-pattern"></div>
+        <div class="ind-icon">🏥</div>
+        <div class="ind-content">
+          <span class="ind-sector-tag">Medical & Bio-Tech</span>
+          <h3>Microfluidics & Surgical</h3>
+          <div class="ind-detail">Microfluidic channels, surgical blades, and implant components etched from biocompatible materials. Sterile-compatible finishing and full material traceability for regulatory submissions.</div>
+          <a href="#" class="ind-link">Explore sector <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="industry-card">
+        <div class="ind-bg ind-bg-4"></div>
+        <div class="ind-pattern"></div>
+        <div class="ind-icon">🔋</div>
+        <div class="ind-content">
+          <span class="ind-sector-tag">Green Energy & Hydrogen</span>
+          <h3>Fuel Cell Flow Plates</h3>
+          <div class="ind-detail">Intricate bipolar flow plates for hydrogen fuel cells and electrolysers etched down to 0.010mm material thickness. Enabling the UK's green energy transition through precision manufacturing.</div>
+          <a href="#" class="ind-link">Explore sector <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="industry-card">
+        <div class="ind-bg ind-bg-5"></div>
+        <div class="ind-pattern"></div>
+        <div class="ind-icon">🚗</div>
+        <div class="ind-content">
+          <span class="ind-sector-tag">Automotive & EV</span>
+          <h3>Precision Sensor Components</h3>
+          <div class="ind-detail">Contact springs, sensor components, and structural elements for next-generation automotive and EV applications. High-volume capability with prototype-to-production at one supplier.</div>
+          <a href="#" class="ind-link">Explore sector <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- SECTION 5: TAB SIMULATOR                -->
+<!-- ═══════════════════════════════════════ -->
+<section class="simulator">
+  <div class="container">
+    <div class="simulator-header">
+      <div class="section-label" style="color:rgba(255,255,255,.5)">Interactive Design Tool</div>
+      <h2 class="section-title section-title--white">Optimise Your Component Breakout.</h2>
+      <p>Don't guess how your components will attach to the framework. Preview the four distinct tab styles we use to guarantee edge quality and easy component extraction.</p>
+    </div>
+    <div class="simulator-inner">
+      <div>
+        <div class="sim-panel">
+          <div class="sim-panel-header">
+            <h4>Tab Style Selection</h4>
+          </div>
+          <div class="tab-style-list">
+            <button class="tab-style-btn active" onclick="selectTabStyle(this, 'micro')">
+              <div class="tab-style-icon">▬</div>
+              <div class="tab-style-text">
+                <span class="tab-style-name">Micro Tab</span>
+                <span class="tab-style-desc">Cleanest break-out edge</span>
+              </div>
+            </button>
+            <button class="tab-style-btn" onclick="selectTabStyle(this, 'standard')">
+              <div class="tab-style-icon">▬</div>
+              <div class="tab-style-text">
+                <span class="tab-style-name">Standard Tab</span>
+                <span class="tab-style-desc">General purpose, most common</span>
+              </div>
+            </button>
+            <button class="tab-style-btn" onclick="selectTabStyle(this, 'bridge')">
+              <div class="tab-style-icon">▬</div>
+              <div class="tab-style-text">
+                <span class="tab-style-name">Bridge Tab</span>
+                <span class="tab-style-desc">Maximum rigidity, heavy parts</span>
+              </div>
+            </button>
+            <button class="tab-style-btn" onclick="selectTabStyle(this, 'perforated')">
+              <div class="tab-style-icon">⋮</div>
+              <div class="tab-style-text">
+                <span class="tab-style-name">Perforated Tab</span>
+                <span class="tab-style-desc">Snap-break without tools</span>
+              </div>
+            </button>
+          </div>
+          <div class="thickness-section">
+            <div class="thickness-label">Sheet Thickness</div>
+            <div class="thickness-pills">
+              <button class="thickness-pill active" onclick="selectThickness(this, '0.1mm')">0.1mm</button>
+              <button class="thickness-pill" onclick="selectThickness(this, '0.2mm')">0.2mm</button>
+              <button class="thickness-pill" onclick="selectThickness(this, '0.5mm')">0.5mm</button>
+              <button class="thickness-pill" onclick="selectThickness(this, '1.0mm')">1.0mm</button>
+              <button class="thickness-pill" onclick="selectThickness(this, '1.5mm')">1.5mm</button>
+              <button class="thickness-pill" onclick="selectThickness(this, '2.0mm')">2.0mm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sim-display">
+        <div class="sim-display-header">
+          <span class="sim-display-title">Sheet Breakout Preview</span>
+          <span class="sim-display-meta" id="simMeta">Micro Tab · 0.1mm</span>
+        </div>
+        <div class="sim-canvas">
+          <div class="sheet-viz">
+            <div class="sheet-frame">
+              <div class="sheet-components-row">
+                <div class="sheet-component w-md" id="comp1">
+                  <div class="tab-connector tab-micro" id="tab1a"></div>
+                </div>
+                <div class="sheet-component w-sm" id="comp2">
+                  <div class="tab-connector tab-micro" id="tab2a"></div>
+                </div>
+                <div class="sheet-component w-md" id="comp3">
+                  <div class="tab-connector tab-micro" id="tab3a"></div>
+                </div>
+              </div>
+              <div class="sheet-components-row">
+                <div class="sheet-component w-lg" id="comp4">
+                  <div class="tab-connector tab-micro" id="tab4a"></div>
+                </div>
+                <div class="sheet-component w-sm" id="comp5">
+                  <div class="tab-connector tab-micro" id="tab5a"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sim-specs">
+          <div class="sim-spec">
+            <span class="sim-spec-value" id="specTab">6px</span>
+            <span class="sim-spec-label">Tab Width</span>
+          </div>
+          <div class="sim-spec">
+            <span class="sim-spec-value" id="specBreak">0.3N</span>
+            <span class="sim-spec-label">Break Force</span>
+          </div>
+          <div class="sim-spec">
+            <span class="sim-spec-value" id="specEdge">±0.05mm</span>
+            <span class="sim-spec-label">Edge Tolerance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- SECTION 6: HUMAN ELEMENT                -->
+<!-- ═══════════════════════════════════════ -->
+<section class="human-element">
+  <div class="container">
+    <div class="human-inner">
+      <div class="human-img-wrap">
+        <div class="human-img">
+          <div class="team-placeholder">
+            <div class="team-avatars">
+              <div class="team-avatar">MR</div>
+              <div class="team-avatar">SK</div>
+              <div class="team-avatar">JT</div>
+              <div class="team-avatar">AL</div>
+            </div>
+            <p style="font-size:14px; font-weight:600; color:var(--navy);">The Photofab Team</p>
+            <p style="font-size:13px; color:var(--muted); text-align:center; max-width:240px;">Engineers, account managers, and quality specialists — all under one roof in St Neots</p>
+          </div>
+        </div>
+        <div class="human-img-badge">
+          <div class="badge-top">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Available Now</span>
+          </div>
+          <div class="badge-sub">01480 226686 · Direct line</div>
+        </div>
+      </div>
+      <div class="human-content">
+        <div class="section-label">No Bureaucracy. No Call Centres.</div>
+        <h2 class="section-title">Real Engineers.<br>Dedicated Account<br>Managers.</h2>
+        <p>We don't hide behind automated ticketing systems or generic call centres. Every project at Photofab is assigned a single, dedicated Technical Account Manager.</p>
+        <blockquote>
+          "From the moment you upload your CAD file to final quality inspection, you have direct phone and email access to the specialist managing your line."
+        </blockquote>
+        <p>This isn't just good service — it's how engineering should work. When a revision is needed at 4:30pm on a Friday, you call your account manager, not a queue.</p>
+        <div class="manager-cards">
+          <div class="manager-card">
+            <div class="manager-avatar">MR</div>
+            <div class="manager-info">
+              <h5>Mike Reynolds</h5>
+              <span>Aerospace & Defence Lead</span>
+            </div>
+          </div>
+          <div class="manager-card">
+            <div class="manager-avatar">SK</div>
+            <div class="manager-info">
+              <h5>Sarah Knowles</h5>
+              <span>Medical & Electronics</span>
+            </div>
+          </div>
+          <div class="manager-card">
+            <div class="manager-avatar">JT</div>
+            <div class="manager-info">
+              <h5>James Turner</h5>
+              <span>Energy & Industrial</span>
+            </div>
+          </div>
+          <div class="manager-card">
+            <div class="manager-avatar">AL</div>
+            <div class="manager-info">
+              <h5>Anna Larkin</h5>
+              <span>Prototyping & R&D</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- NEWS STRIP                              -->
+<!-- ═══════════════════════════════════════ -->
+<section class="news-strip">
+  <div class="container">
+    <div class="news-header">
+      <div>
+        <div class="section-label">Latest from Photofab</div>
+        <h2 class="section-title" style="font-size:36px;">News & Case Studies</h2>
+      </div>
+      <a href="#" class="btn btn-ghost" style="font-size:13px; padding:10px 20px;">View All Articles →</a>
+    </div>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="news-card-img" style="font-size:36px;">⚗️</div>
+        <div class="news-card-body">
+          <span class="news-tag">Green Energy</span>
+          <h4>How Photofab is Enabling UK Hydrogen Technology</h4>
+          <p>Our ultra-thin bipolar flow plate etching is at the heart of British-made hydrogen electrolyser stacks — and why manufacturers are choosing photochemical over laser.</p>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-card-img" style="font-size:36px;">🛡️</div>
+        <div class="news-card-body">
+          <span class="news-tag">Defence</span>
+          <h4>SC21 Bronze: What It Means for Your Defence Supply Chain</h4>
+          <p>We walk through exactly what our SC21 accreditation covers, the audit process, and why it matters when qualifying a new precision etching supplier.</p>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-card-img" style="font-size:36px;">🔬</div>
+        <div class="news-card-body">
+          <span class="news-tag">Medical</span>
+          <h4>Microfluidics in Medical Diagnostics: The Case for Etching</h4>
+          <p>A technical deep-dive into why photochemical etching produces superior microfluidic channels versus laser ablation — tolerance, surface finish, and channel depth uniformity compared.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- SECTION 7: SPLIT CTA                    -->
+<!-- ═══════════════════════════════════════ -->
+<section class="split-cta">
+  <div class="split-cta-left">
+    <h3>Ready for Production?</h3>
+    <p>Have your drawings ready? Upload your CAD files now for a guaranteed 24-hour technical quote. No minimum orders, no tooling fees, no surprises.</p>
+    <button class="btn" style="font-size:15px; padding:16px 32px;" onclick="openModal('cad')">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      Upload CAD for Quote
+    </button>
+  </div>
+  <div class="split-cta-right">
+    <h3>Need Design Assistance?</h3>
+    <p>Working on an intricate project or need expert advice on metal selection, tab styles, or etchability? Our engineers are available directly — no ticketing system.</p>
+    <button class="btn" style="font-size:15px; padding:16px 32px;" onclick="openModal('engineer')">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      Speak to an Engineer
+    </button>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- FOOTER                                  -->
+<!-- ═══════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="footer-logo-name">Photofab</div>
+        <div class="footer-logo-sub">Precision Etching · Est. 1968</div>
+        <p class="footer-desc">World leaders in photochemical etching — delivering burr-free, stress-free precision metal components to aerospace, medical, electronics, and energy sectors.</p>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 12"/></svg>
+          <a href="tel:01480226686">01480 226686</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:enquiries@photofab.co.uk">enquiries@photofab.co.uk</a>
+        </div>
+        <div class="footer-contact-item" style="align-items:flex-start;">
+          <svg width="14" height="14" style="margin-top:2px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <a href="#">14 Cromwell Road, St Neots,<br>Cambs, PE19 2HP</a>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="footer-social">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer-social">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+          </a>
+        </div>
+        <div class="footer-certs">
+          <span class="cert-badge">ISO 9001</span>
+          <span class="cert-badge">ISO 14001</span>
+          <span class="cert-badge">ISO 45001</span>
+          <span class="cert-badge">SC21 Bronze</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Services</div>
+        <div class="footer-links">
+          <a href="#">Chemical Etching</a>
+          <a href="#">Sheet Metal Forming</a>
+          <a href="#">Metal Plating & Finishing</a>
+          <a href="#">Laser Cutting</a>
+          <a href="#">Metal Stamping</a>
+          <a href="#">Prototyping</a>
+          <a href="#">Far East Supply Chain</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Industries</div>
+        <div class="footer-links">
+          <a href="#">Aerospace & Defence</a>
+          <a href="#">Electronics</a>
+          <a href="#">Medical & Bio-Tech</a>
+          <a href="#">Green Energy & Hydrogen</a>
+          <a href="#">Automotive & EV</a>
+          <a href="#">Industrial & R&D</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Company</div>
+        <div class="footer-links">
+          <a href="#">About Photofab</a>
+          <a href="#">Our Team</a>
+          <a href="#">Quality & Accreditations</a>
+          <a href="#">News & Resources</a>
+          <a href="#">Case Studies</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Photofab Ltd. Registered in England & Wales. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">GDPR</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- ENQUIRY MODAL                           -->
+<!-- ═══════════════════════════════════════ -->
+<div class="modal-overlay" id="modal" onclick="handleOverlayClick(event)">
+  <div class="modal">
+    <div class="modal-header" id="modalHeader">
+      <div>
+        <h3 id="modalTitle">Upload CAD for 24-Hr Quote</h3>
+        <p id="modalSub">Guaranteed technical response within 24 hours</p>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="guarantee-row">
+        <div class="guarantee-item">⚡ 24-Hr Response</div>
+        <div class="guarantee-item">🔒 Files Encrypted</div>
+        <div class="guarantee-item">📞 Direct Access</div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name *</label>
+          <input type="text" placeholder="James" />
+        </div>
+        <div class="form-group">
+          <label>Last Name *</label>
+          <input type="text" placeholder="Smith" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" placeholder="james@company.com" />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="01234 567890" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Company Name *</label>
+        <input type="text" placeholder="Your organisation" />
+      </div>
+      <div class="form-group" id="cadUploadGroup">
+        <label>Upload CAD Files</label>
+        <div class="upload-zone">
+          <p>📎 Drag & drop your files here, or click to browse</p>
+          <span>DXF, DWG, STEP, Gerber — max 10MB per file</span>
+        </div>
+      </div>
+      <div class="form-group" id="messageGroup">
+        <label>Tell Us About Your Project</label>
+        <textarea placeholder="Describe your component, material requirements, quantities, and any tolerance specifications..."></textarea>
+      </div>
+      <button class="form-submit" id="modalSubmitBtn">Request 24-Hour Quote →</button>
+      <p class="form-privacy">🔒 Your files and data are handled under our <a href="#">GDPR-compliant privacy policy</a>. We never share your data.</p>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY ENQUIRE BUTTON -->
+<button class="sticky-enquire" onclick="openModal('cad')">
+  <div class="pulse-ring"></div>
+  Get a 24-Hr Quote
+</button>
+
+<script>
+  // ── METAL GRID ANIMATION ──
+  function buildMetalGrid() {
+    const grid = document.getElementById('metalGrid');
+    if (!grid) return;
+    const pattern = [
+      'solid','etched','solid','solid','etched','solid','etched','solid',
+      'etched','solid','half-etch','solid','solid','half-etch','solid','etched',
+      'solid','solid','etched','half-etch','solid','solid','etched','solid',
+      'half-etch','solid','solid','etched','solid','etched','solid','half-etch',
+      'solid','etched','solid','solid','half-etch','solid','solid','etched',
+      'etched','solid','half-etch','solid','solid','etched','solid','solid',
+    ];
+    pattern.forEach(type => {
+      const cell = document.createElement('div');
+      cell.className = `metal-cell ${type}`;
+      grid.appendChild(cell);
+    });
+  }
+  buildMetalGrid();
+
+  // ── TABS ──
+  function switchTab(id) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // ── SIMULATOR ──
+  const tabStyles = {
+    micro:       { class:'tab-micro',      width:'6px',  force:'0.3N',  edge:'±0.025mm' },
+    standard:    { class:'tab-standard',   width:'10px', force:'1.2N',  edge:'±0.05mm'  },
+    bridge:      { class:'tab-bridge',     width:'14px', force:'3.8N',  edge:'±0.08mm'  },
+    perforated:  { class:'tab-perforated', width:'10px', force:'0.8N',  edge:'±0.05mm'  },
+  };
+  let currentTabStyle = 'micro';
+  let currentThickness = '0.1mm';
+
+  function selectTabStyle(btn, style) {
+    document.querySelectorAll('.tab-style-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentTabStyle = style;
+    updateSim();
+  }
+
+  function selectThickness(btn, t) {
+    document.querySelectorAll('.thickness-pill').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentThickness = t;
+    updateSim();
+  }
+
+  function updateSim() {
+    const s = tabStyles[currentTabStyle];
+    document.querySelectorAll('.tab-connector').forEach(el => {
+      el.className = 'tab-connector ' + s.class;
+    });
+    document.getElementById('specTab').textContent = s.width;
+    document.getElementById('specBreak').textContent = s.force;
+    document.getElementById('specEdge').textContent = s.edge;
+    document.getElementById('simMeta').textContent =
+      currentTabStyle.charAt(0).toUpperCase() + currentTabStyle.slice(1) + ' Tab · ' + currentThickness;
+  }
+
+  // ── MODAL ──
+  function openModal(type) {
+    const modal = document.getElementById('modal');
+    const title = document.getElementById('modalTitle');
+    const sub   = document.getElementById('modalSub');
+    const submitBtn = document.getElementById('modalSubmitBtn');
+    const cadGroup  = document.getElementById('cadUploadGroup');
+    const msgGroup  = document.getElementById('messageGroup');
+
+    if (type === 'cad') {
+      title.textContent = 'Upload CAD for 24-Hr Quote';
+      sub.textContent   = 'Guaranteed technical response within 24 hours';
+      submitBtn.textContent = 'Request 24-Hour Quote →';
+      cadGroup.style.display = '';
+      msgGroup.querySelector('label').textContent = 'Additional Notes';
+    } else {
+      title.textContent = 'Speak with a Technical Engineer';
+      sub.textContent   = 'Direct access — no call centres, no queues';
+      submitBtn.textContent = 'Connect Me with an Engineer →';
+      cadGroup.style.display = 'none';
+      msgGroup.querySelector('label').textContent = 'Describe Your Project or Question';
+    }
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('modal')) closeModal();
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
